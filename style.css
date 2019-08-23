@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+i.fab{
+    font-size: 18px;
+}
+body{
+    background-color: #d3d3d3;
+    background-image: url("./images/repository1.gif");
+    background-size: cover;
+    background-position: 80% 40%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+body > a{
+    height: 40px;
+    width: 48px;
+    display: inline-block;
+    position: absolute;
+    background-color: transparent;
+    left: 23px;
+    top: 18px;
+}
+body > a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.home-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+h1{
+    font-size: 50px;
+    /* margin-bottom: 20px; */
+}
+p{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+input, button{
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border: none;
+}
+input{
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    width: 194.92px;
+    background-color: transparent;
+    outline: none;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+input::placeholder{
+    color: #fff;
+}
+input::-ms-input-placeholder{
+    color: #fff;
+}
+button{
+    color: #fff;
+    background-color: #00618c;
+    width: 71.08px;
+    font-weight: bold;
+    font-size: 12px;
+}
+button:active, button:hover{
+    background-color: #005073;
+}
+
+.social a img{
+    width: 24px;
+    height: 24px;
+}
+.social{
+    width: 274px;
+    margin: 0 auto;
+}
+.social div{
+    width: 194.92px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 21px;
+}
+.social div a:not(:last-child){
+    padding-right: 10px;
+}
+@media only screen and (min-width: 767px){
+    body > a{
+        left: 96px;
+        top: 51px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    p{
+        font-size: 16px;
+        width: 600px;
+        margin: 0 auto 25px;
+    }
+    .home-container{
+        top: 60%;
+    }
+    .social a img{
+        width: 48px;
+        height: 48px;
+    }
+    .social{
+        width: 483px;
+    }
+    .social div{
+        padding-top: 30px;
+    }
+    input, .social div{
+        width: 351px;
+    }
+    button{
+        width: 128px;
+    }
+    input, button{
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+    }
+}

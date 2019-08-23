@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    background-color: #000;
+    font-weight: 100;
+}
+input{
+    border: none;
+    outline: none;
+}
+html{
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+input#toggle_signin,
+input#toggle_signup{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+nav{
+    background: #FFFFFF;
+    box-shadow: 0px 3px 15px #D9D9D9;
+    height: 50px;
+}
+.signup-wrapper nav{
+    background: #3498DB;
+    box-shadow: 0px 3px 15px #005073;
+    /* z-index: 2; */
+}
+nav a{
+    height: 40px;
+    width: 48px;
+    display: inline-block;
+    padding-left: 15px;
+}
+nav img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.register-container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.signup-wrapper, .signin-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+section{
+    padding: 0 17px;
+    position: absolute;
+    /* z-index: 1; */
+    width: 100%;
+}
+.signup-wrapper{
+    top: 100%;
+    transition: top 0s 0.256s;
+    /* background: #00375e; */
+    color: #fff;
+    background: linear-gradient(180deg, #3498DB 0%, rgba(255, 255, 255, 0) 100%), #00375e;
+
+    /* z-index: -1; */
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    /* background: linear-gradient(180deg, #3498DB 0%, rgba(255, 255, 255, 0) 100%), #00375e; */
+    z-index: -1;
+}
+.signin-wrapper{
+    top: 0;
+    transition: top 0.256s;
+    background: #fff;
+}
+input#toggle_signin:checked ~ .signup-wrapper{
+    top: 0;
+    z-index: 1;
+    transition: top 0.256s;
+}
+input#toggle_signin:checked ~ .signin-wrapper{
+    top: -100%;
+    transition: top 0s 0.256s;
+}
+section > p{
+    text-align: center;
+    padding: 26px 0 21px 0;
+}
+
+.sign-in-with-social{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+a.sign-in-common{
+    display: inline-block;
+    color: #000;
+    height: 45px;
+    line-height: 45px;
+    width: 132px;
+    border: 1px solid #d2d3d3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.signup-wrapper a.sign-in-common{
+    color: #fff;
+}
+.sign-in-common span{
+    font-size: 14px;
+    vertical-align: middle;
+}
+.sign-in-common img{
+    width: 14px;
+    height: 14px;;
+    object-fit: cover;
+    font-size: 14px;
+    background-color: yellow;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sign-in-fb span{
+    padding-left: 8px;
+}
+.sign-in-google span{
+    padding-left: 16px
+}
+
+/* Page Divider */
+.page-divider{
+    justify-content: space-between;
+    padding: 27px 0;
+    position: relative;
+    text-align: center;
+}
+.page-divider hr{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+}
+.page-divider hr{
+    border: 1px solid #d2d3d3;
+    width: 110px;
+}
+.page-divider hr:last-child{
+    right: 0;
+}
+
+/* Form area */
+form{
+    margin-bottom: 34px;
+}
+form h4{
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.signup-wrapper form h4{
+    padding-bottom: 20px;
+}
+.general-input input{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.signup-wrapper .general-input input{
+    border-bottom: 1.5px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+.general-input input::placeholder{
+    color: rgba(0, 0, 0, 0.38);
+    line-height: 24px;
+}
+.signup-wrapper .general-input input::placeholder{
+    color: #fff;
+}
+form a{
+    display: block;
+    color: #fff;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 242.89px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #3498DB 0%, rgba(255, 255, 255, 0) 100.05%), #005073;
+    border-radius: 4px;
+}
+.signup-wrapper form > a{
+    background: #fff;
+    color: #000;
+}
+section > a{
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+section .forgotten-pass{
+    font-size: 12px;
+    margin-bottom: 57px;
+}
+section > a label{
+    font-size: 14px;
+    font-weight: 500;
+    /* backface-visibility: hidden; */
+    -webkit-font-smoothing: antialiased;
+    /* -webkit-filter: blur(0);
+    filter: blur(-0.5); */
+}
+section > a label span{
+    font-weight: 700;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-filter: blur(0.1);
+    filter: blur(0.1);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+}
+section > a label span{
+    /* font-size: 16px; */
+}
+.signup-wrapper section > a{
+    color: #fff;
+}
+
+@media only screen and (max-height: 679px){
+    form{
+        margin-bottom: 0;
+    }
+    .signup-wrapper form > a{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    section .forgotten-pass{
+        margin-bottom: 0;
+    }
+    .general-input input{
+        margin-bottom: 30px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .signup-wrapper .general-input input{
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    section > a{
+        padding: 10px 0;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-height: 679px){
+    .signup-wrapper, .signin-wrapper{
+        overflow-y: scroll;
+    }
+}
