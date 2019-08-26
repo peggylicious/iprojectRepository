@@ -11,6 +11,9 @@ body{
     background-color: #000;
     font-weight: 100;
 }
+.info{
+    display: none;
+}
 input{
     border: none;
     outline: none;
@@ -21,6 +24,15 @@ html{
 }
 body{
     font-family: 'Nunito', sans-serif;
+}
+.main-account-container{
+    height: 100vh;
+    overflow: hidden;
+}
+.main-account-container > input#toggle_signup_1{
+    position: absolute;
+    opacity: 0;
+    top: 0;
 }
 a{
     text-decoration: none;
@@ -35,17 +47,17 @@ nav{
     background: #FFFFFF;
     box-shadow: 0px 3px 15px #D9D9D9;
     height: 50px;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 .signup-wrapper nav{
     background: #3498DB;
     box-shadow: 0px 3px 15px #005073;
-    /* z-index: 2; */
 }
 nav a{
     height: 40px;
     width: 48px;
     display: inline-block;
-    padding-left: 15px;
 }
 nav img{
     height: 100%;
@@ -54,7 +66,7 @@ nav img{
 }
 .register-container{
     position: relative;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 .signup-wrapper, .signin-wrapper{
@@ -154,11 +166,10 @@ a.sign-in-common{
     top: 50%;
     transform: translateY(-50%);
     height: 1px;
-}
-.page-divider hr{
     border: 1px solid #d2d3d3;
     width: 110px;
 }
+
 .page-divider hr:last-child{
     right: 0;
 }
@@ -182,8 +193,6 @@ form h4{
     font-size: 1rem;
     margin-bottom: 40px;
     width: 100%;
-    outline: none;
-    border: none;
 }
 .signup-wrapper .general-input input{
     border-bottom: 1.5px solid #fff;
@@ -227,19 +236,19 @@ section > a label{
     font-size: 14px;
     font-weight: 500;
     /* backface-visibility: hidden; */
-    -webkit-font-smoothing: antialiased;
+    /* -webkit-font-smoothing: antialiased; */
     /* -webkit-filter: blur(0);
     filter: blur(-0.5); */
 }
 section > a label span{
-    font-weight: 700;
+    /* font-weight: 700;
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-filter: blur(0.1);
-    filter: blur(0.1);
+    filter: blur(0.1); */
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    backface-visibility: hidden;
+    /* -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden; */
 }
 section > a label span{
     /* font-size: 16px; */
@@ -278,5 +287,104 @@ section > a label span{
 @media only screen and (max-height: 679px){
     .signup-wrapper, .signin-wrapper{
         overflow-y: scroll;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .main-account-container{
+        position: relative;
+    }
+    .register-container{
+        height: 90%;
+        width: 70%;
+        background-color: green;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    .info{
+        display: block;
+        height: 100%;
+        width: 400px;
+        background-color: pink;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: right 1s;
+        z-index: 10;
+        overflow: hidden;
+    }
+    .main-account-container > input{
+        position: absolute;
+        opacity: 0;
+    }
+    .info p{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .info p.a{
+        left: 0;
+        transition: left 1s, opacity 1s;
+        opacity: 1;
+    }
+    .info p.b{
+        opacity: 0;
+        right: -100%;
+        transition: right 1s, opacity 1s;
+    }
+    .signup-wrapper, .signin-wrapper{
+        width: calc(100% - 400px);
+        left: 0;
+        right: initial;
+        top: 0;
+        position: absolute;
+    }
+    .signin-wrapper{
+        opacity: 1;
+        transition: left 1s, opacity 1s;
+    }
+    .signup-wrapper{
+        opacity: 0;
+        z-index: 0;
+        transition: left 1s, opacity 1s;
+        background:  #fff;
+        color: #000;
+    }
+    .signup-wrapper .general-input input,
+    .signup-wrapper .general-input input::placeholder{
+        color: #000;
+    }
+    .signup-wrapper .general-input input{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    input#toggle_signup_1:checked ~ .register-container .info p.a{
+        left: -100%;
+        opacity: 0;
+    }
+    input#toggle_signup_1:checked ~ .register-container .info p.b{
+        right: 0;
+        opacity: 1;
+    }
+    .info label{
+        display: block;
+        position: absolute;
+        top: 50px;
+    }
+    input#toggle_signup_1:checked ~ .register-container .info{
+        right: calc(100% - 400px);
+    }
+    input#toggle_signup_1:checked ~ .register-container .signin-wrapper,
+    input#toggle_signup_1:checked ~ .register-container .signup-wrapper{
+        left: 400px;
+    }
+    input#toggle_signup_1:checked ~ .register-container .signin-wrapper{
+        opacity: 0;
+    }
+    input#toggle_signup_1:checked ~ .register-container .signup-wrapper{
+        opacity: 1;
+        z-index: 1;
     }
 }
