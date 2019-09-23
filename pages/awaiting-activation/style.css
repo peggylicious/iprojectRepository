@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+html{
+    font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+nav .navbar-brand{
+    height: 100%;
+    width: 65px;
+    background: #3498db;
+}
+
+nav.navbar{
+    height: 48px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+.navbar button.navbar-toggler{
+    position: relative;
+    width: 55px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+.navbar button.navbar-toggler span{
+    position: relative;
+    height: 2px;
+    width: 18px;
+    background: #000;
+}
+.navbar button.navbar-toggler span:before,
+.navbar button.navbar-toggler span:after{
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    background: #000;
+    content: "";
+    left: 0;
+}
+.navbar button.navbar-toggler span:before{
+    top: 5px;
+}
+.navbar button.navbar-toggler span:after{
+    top: -5px;
+}
+
+/* Toggler actions */
+.navbar button.navbar-toggler:hover,
+.navbar button.navbar-toggler:focus,
+.navbar button.navbar-toggler:active{
+    border: 0;
+    outline: 0;
+}
+
+.here{
+    background-color: pink;
+}
+.awaiting-decor{
+    width: 100%;
+    height: 263px;
+    background-image: url("../../images/undraw_Waiting__for_you_ldha.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 46px;
+    margin-bottom: 29px;
+}
+.second-col p{
+    font-size: 1.25rem;
+    font-weight: bold;
+    width: 328px;
+    margin: 0 auto;
+    text-align: center;
+}
+.second-col .account-status{
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+.second-col .account-status{
+    color: #3498db;
+}

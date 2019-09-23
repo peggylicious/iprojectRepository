@@ -111,6 +111,7 @@ input#toggle_signin:checked ~ .signin-wrapper{
     top: -100%;
     transition: top 0s 0.256s;
 }
+
 section > p{
     text-align: center;
     padding: 26px 0 21px 0;
