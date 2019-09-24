@@ -79,6 +79,57 @@ nav.navbar{
     font-size: 0.75rem;
     font-weight: normal;
 }
-.second-col .account-status{
+.second-col .account-status span{
     color: #3498db;
+}
+@media only screen and (min-width: 700px){
+    .second-col{
+        display: flex;
+    }
+    nav .navbar-brand{
+        width: 136px;
+        margin-left: 24px;
+    }
+    .collapse.navbar-collapse{
+        justify-content: flex-end !important;
+        align-items: flex-end;
+        width: 100%;
+        /* align-self: right; */
+    }
+    .collapse.navbar-collapse ul{
+        padding-left: 26px;
+    }
+    nav .navbar-nav{
+        width: 100%;
+        padding-right: 26px;
+
+        /* background-color: red; */
+        justify-content: flex-end;
+        justify-self: right !important;
+    }
+    .navbar button.navbar-toggler{
+        display: none;
+    }
+    .awaiting-decor{
+        width: 699px;
+        height: 551px;
+        background-size: cover;
+    }
+    .second-col p{
+        font-size: 2rem;
+        width: 533px;
+        margin-top: 112px;
+        text-align: left;
+    }
+    .second-col .account-status{
+        width: 556px;
+        font-size: 1rem;
+    }
+    .navbar-nav li{
+        display: flex;
+        align-items: center;
+    }
+    /* .navbar-nav li img{
+        object-position: 50%;
+    } */
 }
