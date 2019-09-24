@@ -8,13 +8,13 @@ nav .navbar-brand{
     width: 65px;
     background: #3498db;
 }
-
+.row .first-col{
+    z-index: 10;
+}
 nav.navbar{
     height: 48px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
-
-
 .navbar button.navbar-toggler{
     position: relative;
     width: 55px;
@@ -58,6 +58,10 @@ nav.navbar{
 .here{
     background-color: pink;
 }
+.collapse.navbar-collapse{
+    /* background-color: red; */
+    background-color: #fafafa;
+}
 .awaiting-decor{
     width: 100%;
     height: 263px;
@@ -84,7 +88,12 @@ nav.navbar{
 }
 @media only screen and (min-width: 700px){
     .second-col{
-        display: flex;
+        /* display: flex; */
+    }
+    .awaiting-text{
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     nav .navbar-brand{
         width: 136px;
@@ -124,12 +133,24 @@ nav.navbar{
     .second-col .account-status{
         width: 556px;
         font-size: 1rem;
+        margin-top: 25px;
     }
     .navbar-nav li{
         display: flex;
         align-items: center;
     }
-    /* .navbar-nav li img{
-        object-position: 50%;
-    } */
+    .collapse.navbar-collapse{
+        background-color: #fff;
+    }
+    .sprout-1{
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 150px;
+        background-image: url("../../icons/Group\ 5.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right 80%;
+    }
 }
