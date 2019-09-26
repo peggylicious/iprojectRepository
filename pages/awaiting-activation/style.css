@@ -8,8 +8,15 @@ nav .navbar-brand{
     width: 65px;
     background: #3498db;
 }
+.row{
+    height: 100vh;
+    /* height: 100vh; */
+    /* background-color: red; */
+    position: relative;
+}
 .row .first-col{
     z-index: 10;
+    height: 48px;
 }
 nav.navbar{
     height: 48px;
@@ -72,28 +79,49 @@ nav.navbar{
     margin-top: 46px;
     margin-bottom: 29px;
 }
-.second-col p{
+.awaiting-text p{
     font-size: 1.25rem;
     font-weight: bold;
     width: 328px;
     margin: 0 auto;
     text-align: center;
 }
-.second-col .account-status{
+.awaiting-text .account-status{
     font-size: 0.75rem;
     font-weight: normal;
 }
-.second-col .account-status span{
+.awaiting-text .account-status span{
     color: #3498db;
 }
-@media only screen and (min-width: 700px){
+ /* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 768px) and (max-width: 1024px){
+    /* .container-fluid .row {
+        background-color: blue;
+    } */
+}
+
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2){
+    /* background-color: blue; */
+}
+/* @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    background-color: blue;
+
+} */
+@media only screen and (min-width: 768px){
     .second-col{
         /* display: flex; */
+        height: calc(100% - 48px);
     }
     .awaiting-text{
         position: absolute;
         right: 0;
         top: 0;
+        width: 50%;
+        font-size: 16px;
     }
     nav .navbar-brand{
         width: 136px;
@@ -120,20 +148,29 @@ nav.navbar{
         display: none;
     }
     .awaiting-decor{
-        width: 699px;
-        height: 551px;
-        background-size: cover;
+        /* width: 699px; */
+        position: absolute;
+        width: 70%;
+        /* height: 551px; */
+        height: calc(100vh - 48px);
+        background-size: 70%;
+        background-position: 0 100%;
+        margin-bottom: 0;
+        margin-top: 0;
     }
-    .second-col p{
-        font-size: 2rem;
-        width: 533px;
+    .awaiting-text p{
+        font-size: 2em;
+        /* width: 533px; */
         margin-top: 112px;
         text-align: left;
+        width: 100%;
+        background-color: transparent;
     }
-    .second-col .account-status{
-        width: 556px;
+    .awaiting-text .account-status{
+        /* width: 556px; */
         font-size: 1rem;
         margin-top: 25px;
+        width: 100%;
     }
     .navbar-nav li{
         display: flex;
@@ -143,14 +180,14 @@ nav.navbar{
         background-color: #fff;
     }
     .sprout-1{
-        width: 50%;
+        width: 60%;
         position: absolute;
         bottom: 0;
         right: 0;
         height: 150px;
         background-image: url("../../icons/Group\ 5.svg");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100%;
         background-position: right 80%;
     }
 }

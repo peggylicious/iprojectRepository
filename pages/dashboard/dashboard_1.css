@@ -6,6 +6,9 @@
     box-sizing: border-box;
     /* color: red; */
 }
+form textarea {
+    resize: none;
+}
 body{
     /* background-color: #000; */
     font-weight: 100;
@@ -19,11 +22,9 @@ body .container-fluid *{
 }
 .container-fluid .col.first{
     max-width: 65px;
-    /* background: #3498db; */
     height: 48px;
     transition: max-width 2s;
     position: static;
-    /* width: auto; */
 }
 input[type="checkbox"],
 input[type="radio"]{
@@ -79,7 +80,6 @@ nav{
 button.navbar-toggler{
     height: 48px;
     border: 0;
-    /* background-color: red; */
 }
 button.navbar-toggler:focus,
 button.navbar-toggler:active{
@@ -142,33 +142,16 @@ button.navbar-toggler span:after{
     height: 100%;
     line-height: 48px;
 }
-label{
-    /* background-color: yellow; */
-}
 
-.move-down{
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    transition: top 2s;
-}
-.move-down .row .col > label{
-    background-color: #fff;
-    color: #000;
-    font-weight: 600;
-    height: 48px;
-    border: none;
-    outline: none;
-}
-/* Dropdown */
+
+
+/*First column - Sidenav Dropdown */
 .reveal .dropdown-menu{
     background-color: transparent;
     color: #fff;
 }
 .reveal .dropdown > button{
     height: 46px;
-    /* padding: 13px 0 9px 17px; */
     padding-left: 17px;
     background-color: transparent;
 }
@@ -198,7 +181,6 @@ label{
     box-shadow: none;
     border: none;
     outline: 0;
-
 }
 
 .dropdown button span.dropdown-icon{
@@ -236,6 +218,28 @@ label{
     color: #fff;
 }
 
+/*Second column - Sidenav Move down */
+.move-down{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    transition: top 2s;
+}
+.move-down .row .col > label{
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    height: 48px;
+    border: none;
+    outline: none;
+}
+.move-down .col{
+    position: static;
+}
+.move-down .row .col:hover{
+    border-bottom: 2px solid #3498db;
+}
 
 /* Breadcrumb */
 
@@ -271,15 +275,14 @@ nav.breadcrumb-nav ol{
     /* height: 80px; */
     font-size: 12px;
 }
-/* Navbar */
-.navbar .nav-child{
-    /* width: 300px; */
-    height: 100%;
-    margin: 0;
-}
+
+
+
+
+/* Second Column Nav header form */
+
 .col.second .nav-item form{
     padding: 0;
-    /* line-height: 48px; */
 }
 .col.second .nav-item form input[type="text"]{
     background-image: url("../../images/search-magnifier-interface-symbol\ \(1\).png");
@@ -291,7 +294,6 @@ nav.breadcrumb-nav ol{
     display: block;
     line-height: 48px;
     background-color: transparent;
-    /* background-color: red; */
 }
 .col.second .nav-item form input[type="text"]::placeholder{
     /* display: none; */
@@ -308,20 +310,9 @@ nav.breadcrumb-nav ol{
     left: 0;
     padding-left: 15px;
     background-color: #fff;
+    z-index: 20;
 }
-.animated-form .hide-form{
-    /* line-height: 48px; */
-    display: block;
-    font-size: 0;
-    width: 100%;
-    text-align: center;
-}
-.animated-form .hide-form img{
-    display: none;
-    margin: 0 auto;
-    text-align: center;
-    /* width: 20px; */
-}
+
 .col.second .nav-item form input[type=text]:focus{
     background-image: none;
     border: 0;
@@ -334,20 +325,29 @@ nav.breadcrumb-nav ol{
     position: absolute;
     z-index: 20;
     right: 100%;
-    /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12); */
-    /* left: -100%; */
 }
 .col.second .nav-item form input[type=text]:focus ~ .hide-form img{
     display: block;
     margin-top: 15px;
 }
-.navbar .nav-child ul li{
-    /* background-color: red; */
-    /* display: inline; */
+
+.navbar .nav-child{
+    height: 100%;
+    margin: 0;
 }
-.navbar .nav-child ul{
-    /* height: 50px; */
+
+.animated-form .hide-form{
+    display: block;
+    font-size: 0;
+    width: 100%;
+    text-align: center;
 }
+.animated-form .hide-form img{
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Right dotted hamburger(more vertical icon) */
 .collapse{
     height: 138px;
     width: 132px;
@@ -359,26 +359,19 @@ nav.breadcrumb-nav ol{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
 }
+/* Second column tabs */
 label.tabs{
     width: 100%;
-    /* line-height: 50px; */
     text-align: center;
     padding: 0 10px;
     font-size: 14px;
     font-weight: 600;
     border: none;
-    /* line-height: 100%; */
-    /* height: 100%; */
+
 }
 label.tabs span{
     width: 70px;
     font-size: 14px;
-    /* word-wrap: break-word; */
-    /* display: block; */
-    /* vertical-align: middle; */
-
-    /* height: 50px;
-    line-height: 50px; */
     background-color: #fff;
 }
 label.tabs ~ p,
@@ -389,12 +382,7 @@ label.tabs ~ form{
     /* background-color: red; */
     left: 0;
 }
-.move-down .col{
-    position: static;
-}
-.move-down .row .col:hover{
-    border-bottom: 2px solid #3498db;
-}
+
 
 /* FORM */
 .row .col form{
@@ -429,11 +417,15 @@ form .form-control{
     border-radius: 2px;
     background-color: #f4f4f4;
 }
-form button.btn[type="submit"]{
+form button.btn[type="submit"],
+.move-down .col > form > label{
     background: #3498DB;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
     border-radius: 2px;
     width: 328px;
+    /* margin: 0 auto 69px auto; */
+}
+form button.btn[type="submit"]{
     margin: 0 auto 69px auto;
 }
 form button.btn[type="submit"] img{
@@ -491,12 +483,7 @@ form button.btn[type="submit"] span{
 .form-group .uploader input::-webkit-file-upload-button{
     visibility: hidden;
 }
-/* .form-group.uploader input:before{
-    content: "a";
-}
-.form-group.uploader input:after{
-    content: "b";
-} */
+
 
 input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ p,
 input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
@@ -517,12 +504,24 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
     display: block;
 }
 
-
-
-
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 0;
-    }
+}
+
+.tab-3-form .form-group{
+    position: relative;
+}
+.tab-3-form .form-group span{
+    position: absolute;
+    right: 7px;
+    top: 50px;
+}
+.tab-3-form .form-group textarea{
+    padding-top: 15px;
+}
+
+
+
 @media only screen and (max-width: 699px){
     input#toggle-me:checked ~ .container-fluid .move-down{
         top: 400px;
@@ -531,9 +530,14 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
         height: 400px;
     }
 }
+
+
 @media only screen and (min-width: 700px){
     body{
         background-color: #eeeeee !important;
+    }
+    label{
+        width: 100%;
     }
     body .row{
         box-shadow: none;
@@ -547,36 +551,60 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-color: #fff;
     }
+    input#toggle-me:checked ~ .container-fluid .col.first{
+        max-width: 245px;
+    }
 
+    /* Reveal */
     .move-down, .reveal{
         position: relative;
         top: 0;
         width: 100%;
     }
     .row .reveal{
-        /* width: 50px; */
-        /* width: 400px; */
         height: calc(100vh - 50px);
         overflow-y: visible;
         position: absolute;
         top: 48px;
         background-color: #fff !important;
     }
+    /*Second column - Move down */
+    .move-down .row{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .collapse.navbar-collapse{
+        top: 48px;
+        position: absolute;
+        width: auto;
+    }
+    .move-down .col{
+        max-width: 181px;
+    }
+
+
+    /*First column - Sidenav Dropdown (Large screens)*/
+
     .dropdown button{
         color: #000;
     }
     .dropdown button span.dropdown-icon{
         background-color: #000;
     }
+    .dropdown button span:last-child,
+    .dropdown button svg{
+        display: none;
+    }
     .reveal .dropdown-menu.placement{
         background-color: #00618C;
     }
-    label{
-        width: 100%;
+    input#toggle-me:checked ~ .container-fluid .dropdown button span:last-child,
+    input#toggle-me:checked ~ .container-fluid .dropdown button svg{
+        display: block;
     }
-    .navbar .nav-child ul.navbar-nav{
-        justify-content: flex-start !important;
-    }
+
+
+    /* Second column Nav*/
     .col.second .nav-item form input[type="text"]::placeholder{
         /* display: none; */
         visibility: visible;
@@ -586,49 +614,21 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
     }
     .col.second .nav-item form input[type="text"]{
         width: 180px;
-        /* background-color: #fff; */
         background-position: 150px center;
         border-left: 1px solid #C4C4C4;
         border-right: 1px solid #C4C4C4;
         padding-left: 10px;
     }
-
-
-    .dropdown button span:last-child,
-    .dropdown button svg{
-        display: none;
-    }
-    input#toggle-me:checked ~ .container-fluid .dropdown button span:last-child,
-    input#toggle-me:checked ~ .container-fluid .dropdown button svg{
-        display: block;
-    }
-    .container-fluid .col.first{
-        /* max-width: 400px; */
-    }
-    input#toggle-me:checked ~ .container-fluid .col.first{
-        max-width: 245px;
-    }
-
-    button.navbar-toggler{
-        /* display: none !important; */
-    }
-    .collapse.navbar-collapse{
-        top: 48px;
-        position: absolute;
-        width: auto;
+    .navbar .nav-child ul.navbar-nav{
+        justify-content: flex-start !important;
     }
     nav.navbar{
-        /* background-color: rgb(49, 24, 24) !important; */
         width: 100%;
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
-        /* background-color: #fff; */
-
     }
-.move-down .row{
-    padding-left: 40px;
-    padding-right: 40px;
-}
-    /* Tabs */
+
+
+    /* Breadcrumb / Tabs*/
     .row .col > form, nav.breadcrumb-nav{
         width: calc(100% - 80px);
         margin-left: 40px;
@@ -636,23 +636,13 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
     nav.breadcrumb-nav{
         background-color: transparent;
     }
-    .row .col > form{
-        padding-top: 26px;
-        /* width: calc(100% - 80px);
-        margin-left: 40px; */
-        background-color: #fff;
-        /* margin: 0; */
+    nav.breadcrumb-nav{
+        height: 33px;
+        margin-top: 33px;
+        margin-bottom: 25px;
+        justify-content: space-between;
     }
-    form .form-group{
-        margin: 0;
-    }
-    /* form .form-group.group-1 label,
-    form .form-group.group-2 label{
-        margin: 26px 0 0 0;
-    } */
-    form label{
-        margin: 0;
-    }
+
     label.tabs span{
         width: 100%;
         background-color: transparent;
@@ -660,90 +650,128 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
     label.tabs span br{
         display: none;
     }
-    nav.breadcrumb-nav{
-        height: 33px;
-        margin-top: 33px;
-        margin-bottom: 25px;
-        justify-content: space-between;
-    }
     .move-down .row .col > label {
         height: 40px;
     }
-    .form-group .uploader{
+
+
+    /* Second column forms */
+
+    .move-down .row .col > form{
+        padding-top: 26px;
+        /* width: calc(100% - 80px);
+        margin-left: 40px; */
+        background-color: #fff;
+    }
+    .move-down form .form-group{
+        margin: 0;
+    }
+    .move-down form label{
+        margin: 0;
+    }
+    .move-down form button.btn[type="submit"],
+    .move-down .col  form > label{
+        width: 203px;
+    }
+    .move-down form button.btn[type="submit"] span{
+        font-size: 14px;
+    }
+    .move-down .form-group .uploader{
         width: 203px;
         padding: 0;
         background-color: transparent;
         height: auto;
     }
-    .form-group .uploader > div {
+    .move-down .form-group .uploader > div {
         height: 227px;
         width: 203px;
     }
-    .form-group .uploader > div img {
+    .move-down .form-group .uploader > div img {
         height: 147px;
     }
-    .form-group .uploader > div span {
+    .move-down .uploader label img{
+        display: none;
+    }
+    .move-down .form-group .uploader > div span {
         font-size: 16px;
         font-weight: normal;
     }
-    .row .col .tab-1-form{
+    .move-down .row .col .tab-1-form{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(100px, aut0);
         grid-gap: 10px;
     }
-input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
-    display: grid;
-}
-input#toggle_first_tab:checked ~ .container-fluid label.tab_2 ~ form,
-input#toggle_first_tab:checked ~ .container-fluid label.tab_3 ~ form,
-input#toggle_second_tab:checked ~ .container-fluid label.tab_1 ~ form,
-input#toggle_second_tab:checked ~ .container-fluid label.tab_3 ~ form,
-input#toggle_third_tab:checked ~ .container-fluid label.tab_1 ~ form,
-input#toggle_third_tab:checked ~ .container-fluid label.tab_2 ~ form{
-    display: none;
-}
+    .move-down .row .col .tab-2-form,
+    .move-down .row .col .tab-3-form{
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, aut0);
+        grid-gap: 10px;
+    }
 
-input#toggle_first_tab:checked ~ .container-fluid .move-down .tab_1,
-input#toggle_second_tab:checked ~ .container-fluid .move-down .tab_2,
-input#toggle_third_tab:checked ~ .container-fluid .move-down .tab_3{
-    background-color: #3498db;
-}
-input#toggle_first_tab:hover ~ .container-fluid .move-down .tab_1,
-input#toggle_second_tab:hover ~ .container-fluid .move-down .tab_2,
-input#toggle_third_tab:hover ~ .container-fluid .move-down .tab_3{
-    background-color: #eeeeee;
-    border-bottom: 2px solid #3498DB;
-}
-.move-down .col{
-    max-width: 181px;
-}
-form button.btn[type="submit"]{
-    width: 203px;
-}
-form button.btn[type="submit"] span{
-    font-size: 14px;
-}
-/* input#toggle_second_tab:checked ~ .container-fluid label.tab_1 ~ form,
-input#toggle_second_tab:checked ~ .container-fluid label.tab_3 ~ form{
-    display: none;
-}
-input#toggle_third_tab:checked ~ .container-fluid label.tab_1 ~ form,
-input#toggle_third_tab:checked ~ .container-fluid label.tab_2 ~ form{
-    display: none;
-} */
-/* input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ p,
-input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ form{
-    display: grid;
-}
-input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ p,
-input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
-    display: grid;
-} */
-
+    .move-down .tab-2-form button.btn[type="submit"],
+    .move-down .tab-3-form button.btn[type="submit"],
+    .move-down .col  form > label{
+        margin-top: 69px;
+    }
+    form button.btn[type="submit"] img{
+        display: none;
+    }
     .uploader.d-flex{
         flex-direction: column !important;
     }
+    .form-group .uploader label{
+        width: 100%;
+    }
+    .move-down .col > form.tab-form-1 > label,
+    .move-down .col > form.tab-form-2 > label.group-2-5,
+    .move-down .col > form.tab-form-3 > label{
+        /* margin-top: 69px !important; */
+    }
+    .move-down .col > form > label{
+        padding: .375rem .75rem;
+        /* display: block !important; */
+        height: 21px;
+        box-sizing: content-box;
+        color: #fff;
+        font-weight: 500;
+    }
+
+
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
+        display: grid;
+    }
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ form{
+        display: grid;
+    }
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
+        display: grid;
+    }
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_2 ~ form,
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_3 ~ form,
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_1 ~ form,
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_3 ~ form,
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_1 ~ form,
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_2 ~ form{
+        display: none;
+    }
+
+    input#toggle_first_tab:checked ~ .container-fluid .move-down .tab_1,
+    input#toggle_second_tab:checked ~ .container-fluid .move-down .tab_2,
+    input#toggle_third_tab:checked ~ .container-fluid .move-down .tab_3{
+        background-color: #3498db;
+    }
+    input#toggle_first_tab:hover ~ .container-fluid .move-down .col > .tab_1,
+    input#toggle_second_tab:hover ~ .container-fluid .move-down .col > .tab_2,
+    input#toggle_third_tab:hover ~ .container-fluid .move-down .col > .tab_3{
+        background-color: #eeeeee;
+        border-bottom: 2px solid #3498DB;
+    }
+
+
+
+
+
     .group-1{
         grid-row: 1/4;
         grid-column: 1;
@@ -781,30 +809,105 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
     form button.btn[type="submit"].group-9{
         grid-row: 6;
         grid-column: 1;
-        /* align-items: flex-start; */
         justify-self: start;
-        /* align-self: stretch; */
         margin: 0 0 69px 0;
     }
-    .form-group .uploader label{
-        width: 100%;
-    }
-    form button.btn[type="submit"].group-10{
+
+    form label.group-10{
         grid-row: 6;
         grid-column: 3/4;
         margin: 0 0 69px 0;
         justify-self: end;
     }
-    form button.btn[type="submit"] img{
-        display: none;
+    form label.group-11{
+        grid-row: 6;
+        grid-column: 4/5;
+        margin: 0 0 69px 0;
+        justify-self: end;
     }
 
-    .move-down .tab-2-form button.btn[type="submit"],
-    .move-down .tab-3-form button.btn[type="submit"]{
-        margin-top: 69px;
+    .group-2-1,
+    .group-3-1{
+        grid-row: 1;
+        grid-column: 1/5;
+    }
+    .group-2-2,
+    .group-3-2{
+        grid-row: 2;
+        grid-column: 1/5;
+    }
+    .group-2-3,
+    .group-3-3{
+        grid-row: 3;
+        grid-column: 1/2;
+    }
+    .group-2-4,
+    .group-3-4{
+        grid-row: 3;
+        grid-column: 2/3;
+    }
+    .group-2-5,
+    .group-3-5{
+        grid-row: 3;
+        grid-column: 3/4;
+    }
+    .navbar-collapse.collapsing{
+        display: none !important; /* Removes transition effect appearing on the left of large screens */
     }
 
-    .uploader label img{
+    /* .collapse:not(.show) {
         display: none;
+    } */
+    .notify-me{
+        margin-left: auto;
     }
+    .notify-me, .message-notification{
+        line-height: 48px;
+        position: relative;
+    }
+    .notify-me:before, .message-notification:before{
+        color: #fff;
+        font-size: 10px;
+        text-align: center;
+        z-index: 10;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 18px;
+        top: 5px;
+        /* left: 11px; */
+    }
+    .message-notification{
+        margin-left: 20px;
+    }
+    .message-notification img{
+        position: relative;
+    }
+    .message-notification:before{
+        content: "1";
+        background: #28B446;
+        left: 11px;
+    }
+    .notify-me:before{
+        content: "0";
+        background: #F14336;
+        left: 8px;
+    }
+    .tab-3-form .form-group{
+        /* position: relative; */
+    }
+    .tab-3-form .form-group span{
+        /* position: absolute; */
+        right: 7px;
+        top: 23px;
+    }
+    .tab-3-form .form-group textarea{
+        /* padding-top: 15px; */
+    }
+}
+
+
+@media (min-width: 992px){
 }
