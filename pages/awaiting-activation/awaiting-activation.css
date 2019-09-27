@@ -70,7 +70,7 @@ nav.navbar{
     background-color: #fafafa;
 }
 .awaiting-decor,
-.verification{
+.verification-image-container{
     width: 100%;
     height: 263px;
     background-image: url("../../images/undraw_Waiting__for_you_ldha.png");
@@ -80,7 +80,7 @@ nav.navbar{
     margin-top: 46px;
     margin-bottom: 29px;
 }
-.second-col .verification{
+.second-col .verification-image-container{
     background-image: url("../../icons/hero-image-verification\ page.svg");
     /* background-color: red; */
     /* background-position: center; */
@@ -98,6 +98,20 @@ nav.navbar{
 }
 .awaiting-text .account-status span{
     color: #3498db;
+}
+#verification-page .awaiting-text form input{
+    width: 236px;
+    height: 36px;
+    text-align: center;
+    display: block;
+    margin: 9px auto 0 auto;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #3498db;
+    border: none;
 }
  /* Media Query for Tablets Ipads portrait mode */
  @media (min-width: 768px) and (max-width: 1024px){
@@ -117,6 +131,15 @@ nav.navbar{
     background-color: blue;
 
 } */
+@media only screen and (min-width: 768px) and (min-height: 1000px){
+    .row{
+        height: 100vh;
+        position: relative;
+    }
+    .row .awaiting-decor, .row .verification-image-container{
+        position: relative;
+    }
+}
 @media only screen and (min-width: 768px){
     .second-col{
         /* display: flex; */
@@ -153,7 +176,7 @@ nav.navbar{
     .navbar button.navbar-toggler{
         display: none;
     }
-    .awaiting-decor, .verification{
+    .awaiting-decor, .verification-image-container{
         /* width: 699px; */
         position: absolute;
         width: 70%;
@@ -164,7 +187,7 @@ nav.navbar{
         margin-bottom: 0;
         margin-top: 0;
     }
-    .second-col .verification{
+    .second-col .verification-image-container{
         /* background-image: url("../../icons/hero-image-verification\ page.svg");
         background-color: red; */
         background-position: 20px center;
@@ -183,6 +206,9 @@ nav.navbar{
         font-size: 1rem;
         margin-top: 25px;
         width: 100%;
+    }
+    #verification-page .awaiting-text form input{
+        margin: 21px 0 0 0;
     }
     .navbar-nav li{
         display: flex;
