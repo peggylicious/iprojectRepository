@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
-<body id="page_">
+<body id="allcategories_page">
     <input type="radio" id="toggle_first_tab" name="radio" checked="checked">
     <input type="radio" id="toggle_second_tab" name="radio" id="toggle_first">
     <input type="radio" name="radio" id="toggle_third_tab">
@@ -178,7 +178,68 @@
                   </div>
               </div>
               <div class="col all-category-section form-col-2 px-0 py-0 plugin-5">
-                Table plugin area
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Visible</th>
+                        <th scope="col">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>John Doe</td>
+                        <td class="text-center">
+                          Effect of extensive reading approach on pupils attitude and achievement in reading comprehension
+                        </td>
+                        <td>@mdo</td>
+                        <td>
+                          <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitches">
+                            <label class="custom-control-label" for="customSwitches"><span class="toggle-yes">Yes</span><span class="toggle-no">No</span></label>
+                          </div>
+
+                        </td>
+                        <!-- <td>
+                          <ul class="nav nav-pills collect">
+                            <li class="dropdown">
+                                <a role="button" href="#" data-toggle="dropdown" class="dropdown-toggle">
+                              More <span class="caret"></span>
+                            </a>
+                                <ul id="submenu" class="dropdown-menu"></ul>
+                            </li>
+                          </ul>
+                        </td> -->
+                        <td>
+                          <select class="browser-default custom-select">
+                            <option selected></option>
+                            <option value="1">Edit</option>
+                            <option value="2">Delete</option>
+                          </select>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <div class="col all-category-section form-col-3 px-0 py-0">
               </div>
