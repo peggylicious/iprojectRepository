@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="../bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 </head>
-<body id="page_">
+<body id="dashboard_page">
     <input type="radio" id="toggle_first_tab" name="radio" checked="checked">
     <input type="radio" id="toggle_second_tab" name="radio" id="toggle_first">
     <input type="radio" name="radio" id="toggle_third_tab">
@@ -22,6 +22,13 @@
               <a class="navbar-brand" href="#"></a>
             </div>
             <div class="reveal">
+              <div class="user-profile-container text-center ">
+                <div class="user-profile-wrapper d-flex align-items-center justify-content-center">
+                  <img src="../../images/user.png" alt="">
+                </div>
+                <p>John Doe</p>
+                <p>Admin</p>
+              </div>
               <div class="dropdown">
                 <button class="btn btn-secondary w-100 d-flex align-items-center justify-content-between" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="d-flex align-items-center">
@@ -149,14 +156,25 @@
                   <!-- <a class="nav-link search-icon px-0 py-0" href="#">Search</a> -->
                   <form action="" class="animated-form">
                     <input type="text" name="" id="" placeholder="Search...">
-                    <div class="hide-form"><img src="../../images/Vector.png" alt=""></div>
+                    <div class="hide-form"><img src="../../images/back-caret.png" alt=""></div>
                   </form>
                 </li>
                 <li class="nav-item active notify-me">
-                    <img src="../../icons/notification.svg" alt="">
+                    <!-- <img src="../../icons/notification.svg" alt=""> -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.9295 20.243L20.2114 17.381C19.4194 16.06 19.0004 14.548 19.0004 13.007V10.5C19.0004 6.641 15.8594 3.5 12.0004 3.5C8.14145 3.5 5.00045 6.641 5.00045 10.5V13.007C5.00045 14.548 4.58144 16.06 3.78944 17.381L2.07142 20.243C1.97842 20.397 1.97641 20.59 2.06444 20.746C2.15345 20.903 2.32042 21 2.50042 21H21.5004C21.6804 21 21.8474 20.903 21.9364 20.746C22.0244 20.59 22.0225 20.397 21.9295 20.243ZM3.38345 20L4.64645 17.895C5.53244 16.419 6.00044 14.729 6.00044 13.007V10.5C6.00044 7.19098 8.69144 4.49998 12.0004 4.49998C15.3094 4.49998 18.0004 7.19098 18.0004 10.5V13.007C18.0004 14.729 18.4684 16.419 19.3534 17.895L20.6174 20H3.38345Z" fill="#696969"/>
+                    <path d="M12 0C10.897 0 10 0.897 10 2.00002V4.00003C10 4.27598 10.224 4.5 10.5 4.5C10.776 4.5 11 4.27598 11 3.99998V2.00002C11 1.44802 11.448 1.00003 12 1.00003C12.552 1.00003 13 1.44802 13 2.00002V4.00003C13 4.27598 13.224 4.5 13.5 4.5C13.776 4.5 14 4.27598 14 3.99998V2.00002C14 0.897 13.103 0 12 0Z" fill="#696969"/>
+                    <path d="M14.164 20.2469C14.023 20.0089 13.718 19.9309 13.479 20.0679C13.24 20.2079 13.16 20.5149 13.3 20.7529C13.43 20.9739 13.501 21.2389 13.501 21.4999C13.501 22.3269 12.828 22.9999 12.001 22.9999C11.174 22.9999 10.501 22.3269 10.501 21.4999C10.501 21.2389 10.572 20.9739 10.702 20.7529C10.841 20.5138 10.761 20.2078 10.523 20.0679C10.282 19.9309 9.97798 20.0089 9.83801 20.2469C9.617 20.6249 9.5 21.0579 9.5 21.4999C9.50005 22.8789 10.621 23.9999 12 23.9999C13.379 23.9999 14.5 22.8789 14.502 21.4999C14.502 21.0579 14.385 20.6249 14.164 20.2469Z" fill="#696969"/>
+                  </svg>
                 </li>
                 <li class="nav-item active message-notification">
-                    <img src="../../icons/Group 2.svg" alt="">
+                  <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4067 0H3.09334C1.38771 0 0 1.38744 0 3.09334V13.0768C0 14.7788 1.38167 16.164 3.08235 16.1701V20.7004L9.59299 16.1701H19.4067C21.1123 16.1701 22.5 14.7824 22.5 13.0768V3.09334C22.5 1.38744 21.1123 0 19.4067 0ZM21.1816 13.0768C21.1816 14.0554 20.3854 14.8517 19.4067 14.8517H9.17935L4.40071 18.177V14.8517H3.09334C2.11459 14.8517 1.31836 14.0554 1.31836 13.0768V3.09334C1.31836 2.11446 2.11459 1.31836 3.09334 1.31836H19.4067C20.3854 1.31836 21.1816 2.11446 21.1816 3.09334V13.0768Z" fill="black"/>
+                    <circle cx="7" cy="9" r="1" fill="black"/>
+                    <circle cx="15" cy="9" r="1" fill="black"/>
+                    <circle cx="11" cy="9" r="1" fill="black"/>
+                  </svg>
+                    <!-- <img src="../../icons/Group 2.svg" alt=""> -->
                 </li>
                 <!-- <li class="nav-item active">
                   Bell
