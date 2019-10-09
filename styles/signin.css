@@ -3,6 +3,9 @@ body{
     background-color: #000;
     font-weight: 100;
 }
+body *{
+    -webkit-font-smoothing: antialiased;
+}
 html{
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
@@ -212,7 +215,9 @@ form div a.btn-default, input.btn-default{
     background: #fff;
     color: #000;
 }
-
+.col-sm.signin-wrapper form input[type="submit"]{
+    background: linear-gradient(90deg, #3498DB 3.5%, rgba(255, 255, 255, 0) 95.31%), #00375E;
+}
 .col-sm.signin-wrapper section .forgotten-pass{
     font-size: 12px;
     margin-bottom: 57px;
