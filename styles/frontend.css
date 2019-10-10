@@ -240,12 +240,14 @@ nav.navbar{
 .ratings-wrapper span:not(:first-child) span{
     margin-left: 9px;
 }
-.listings a.btn{
-    width: 89.89px;
+.listings a.btn,
+article a.btn{
+    /* width: 89.89px; */
     font-size: 12px;
     background: #3498DB;
     border-radius: 2px;
     color: #fff;
+    padding: 5px 10px;
 }
 
 .listings a.btn:hover{
@@ -258,6 +260,122 @@ nav.navbar{
     width: 100%;
 }
 
+
+/* All Project Item Category */
+.row .col.second-col{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.tags-wrapper{
+    padding-left: 13px;
+    padding-top: 63px;
+}
+#main_project_item .row .cols > div,
+#main_project_item .row .cols > ul{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 26px;
+}
+#main_project_item .listings .content-wrapper{
+    width: 100%;
+}
+.ads{
+    display: block;
+    height: 200px;
+    background-color: green;
+    width: 100%;
+}
+.second-col .main-content .listings .topic{
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+}
+.second-col .main-content .listings .content-wrapper > a{
+    border-radius: 4px;
+}
+.second-col .main-content .listings .content-wrapper > a:nth-child(6){
+    background-color: #fff;
+    background: #f14336;
+}
+.second-col .main-content .listings .content-wrapper > a:nth-child(7){
+    background: #005073;
+}
+.second-col .main-content article{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.second-col .main-content article img{
+    width: 127px;
+    height: 125px;
+    background-color: red;
+    display: inline-block;
+}
+#main_project_item article.clear-fix img{
+    margin-right: 17px;
+}
+#main_project_item article.clear-fix p{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+#main_project_item article.clear-fix .ads + p{
+    margin-top: 17px;
+}
+article a.btn{
+    margin: 0 auto;
+    height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
+}
+.badge-container{
+    row-gap: 9px;
+}
+.badge-container .badge-primary{
+    background: #fff;
+    border-radius: 4px;
+    border: 0.5px solid #C4C4C4;
+    color: #3498db;
+    padding: 6px 9px;
+    margin-bottom: 9px;
+    margin-right: 9px;
+}
+
+article.customer-reviews .customer-profile img{
+    width: 24px;
+    height: 24px;
+    background: #000;
+}
+article.customer-reviews .customer-profile p{
+    font-weight: bold;
+    font-size: 12px;
+}
+time{
+    display: block;
+}
+
+input[type="checkbox"]#load_comments{
+    display: none;
+}
+.customer-reviews-wrapper{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.customer-reviews-wrapper label{
+    /* background-color: blue; */
+    color: #696969;
+    font-size: 12px;
+}
+.customer-reviews-wrapper > article{
+    max-height: 250px;
+    overflow-y: hidden;
+}
+input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > article{
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: red;
+}
+.customer-reviews-wrapper hr{
+    border: 0.5px solid #696969;
+}
  /* Media Query for Tablets Ipads portrait mode */
  @media (min-width: 768px) and (max-width: 1024px){
     /* .container-fluid .row {
