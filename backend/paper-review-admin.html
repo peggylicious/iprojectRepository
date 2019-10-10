@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="../styles/backend.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body id="allpaper_admin_page">
+<body>
     <input type="radio" id="toggle_first_tab" name="radio" checked="checked">
     <input type="radio" id="toggle_second_tab" name="radio" id="toggle_first">
     <input type="radio" name="radio" id="toggle_third_tab">
     <input type="checkbox" name="" id="toggle-me">
-    <div class="container-fluid px-0 py-0">
+    <div class="container-fluid px-0 py-0" id="paper_review_admin_page">
       <div class="row mx-0 my-0">
         <div class="col first px-0 py-0">
             <div class="site-logo">
@@ -178,6 +178,89 @@
               </ol>
             </nav>
             <div class="row all-category-row mx-0 my-0">
+              <form class="col all-category-section mx-0 my-0 px-0 py-0">
+                <div class="first-plugin-box">
+                  <div class="form-group plugin-1 d-flex flex-column">
+                    <label for="exampleInputEmail1">From</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  </div>
+                  <div class="form-group plugin-2 d-flex flex-column">
+                    <label for="exampleInputPassword1">To</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group plugin-3 d-flex flex-column">
+                    <label for="exampleInputPassword1">Filter</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                </div>
+                <div class="second-plugin-box">
+                  <div class="form-group plugin-4 d-flex flex-column">
+                    <label for="exampleInputPassword1">Show</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group d-flex flex-column">
+                      <label for="exampleInputPassword1">Search</label>
+                      <div class="d-flex">
+                        <input type="search" class="form-control" id="exampleInputPassword1">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </div>
+                  </div>
+                </div>
+              </form>
+              <div class="col all-category-section form-col-2 px-0 py-0 plugin-5">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">S/N</th>
+                        <th scope="col">Paper Title</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Repository</th>
+                        <th scope="col">Options</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td><p class="paper-title">Effect of extensive reading approach on pupils attitude and achievement in reading comprehension</p></td>
+                        <td class="text-center status">
+                          <span  class="approved">Approved</span>
+                        </td>
+                        <td>
+                          <p class="repo-title">Effect of extensive reading approach on pupils attitude </p>
+                        </td>
+                        <td>
+                          <select class="browser-default custom-select">
+                            <option selected></option>
+                            <option value="1">Edit</option>
+                            <option value="2">Delete</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td class="paper-title"><p>Effect of extensive reading approach on pupils attitude and achievement in reading comprehension</p></td>
+                        <td class="text-center status">
+                          <span class="rejected">Rejected</span>
+                        </td>
+                        <td>
+                          <p class="repo-title">Effect of extensive reading approach on pupils attitude </p>
+                        </td>
+                        <td>
+                          <select class="browser-default custom-select">
+                            <option selected></option>
+                            <option value="1">Edit</option>
+                            <option value="2">Delete</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
