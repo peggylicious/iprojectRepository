@@ -753,6 +753,11 @@ border-radius: 4px;
     background-color: #fafafa;
 }
 
+.table tr td,
+.table tr th{
+    font-size: 12px;
+}
+
 #allcategories_page .move-down .row .col:hover,
 #add_new_project_page .move-down .row .col:hover,
 #paper_review_admin_page .move-down .row .col:hover,
@@ -798,7 +803,7 @@ border-radius: 4px;
 }
 
 /* Paper Preview */
-#paper_review_page .status span{
+ .status span{
     display: inline-block;
     width: 81px;
     height: 24px;
@@ -811,10 +816,10 @@ border-radius: 4px;
 .paper-title{
     width: 357px;
     font-size: 12px;
-    background: yellow;
+    /* background: yellow; */
 }
 .approved{
-    background: #28B446;
+    background: #28b446;
 }
 .rejected{
     background: #f14336;
@@ -823,7 +828,7 @@ border-radius: 4px;
     width: 314px;
     text-align: center;
     font-size: 12px;
-    background: red;
+    /* background: red; */
 }
 
 
