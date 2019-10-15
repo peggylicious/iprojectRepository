@@ -101,15 +101,18 @@ nav.navbar{
 .awaiting-text .account-status span{
     color: #3498db;
 }
-#verification-page .awaiting-text form input{
+#verification-page .awaiting-text a{
     width: 236px;
-    height: 36px;
+    /* height: 36px; */
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: block;
     margin: 9px auto 0 auto;
     font-weight: bold;
     font-size: 12px;
-    line-height: 16px;
+    /* line-height: 36px; */
+    border-radius: 0;
     text-transform: uppercase;
     color: #fff;
     background: #3498db;
@@ -270,6 +273,10 @@ article a.btn{
     padding-left: 13px;
     padding-top: 63px;
 }
+.ratings-wrapper > p{
+    font-weight: bold;
+    font-size: 14px;
+}
 #main_project_item .row .cols > div,
 #main_project_item .row .cols > ul{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
@@ -277,6 +284,8 @@ article a.btn{
 }
 #main_project_item .listings .content-wrapper{
     width: 100%;
+    padding-top: 21px;
+    padding-bottom: 35px;
 }
 .ads{
     display: block;
@@ -358,6 +367,7 @@ input[type="checkbox"]#load_comments{
 .customer-reviews-wrapper{
     padding-left: 17px;
     padding-right: 17px;
+    padding-bottom: 38px;
 }
 .customer-reviews-wrapper label{
     /* background-color: blue; */
@@ -375,21 +385,135 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
 }
 .customer-reviews-wrapper hr{
     border: 0.5px solid #696969;
+    margin-top: 20px;
+    margin-bottom: 51px;
 }
- /* Media Query for Tablets Ipads portrait mode */
- @media (min-width: 768px) and (max-width: 1024px){
-    /* .container-fluid .row {
-        background-color: blue;
-    } */
+.customer-review-form .ratings-wrapper span:not(:first-child) span{
+    margin-left: 0px;
 }
 
-@media only screen
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2){
-    /* background-color: blue; */
+
+/* Create Repository */
+#create_repo .row{
+    height: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
+#create_repo .second-col{
+    background-color: #f2f2f2;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+.fe-form {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 161px;
+    background-color: #fff;
+}
+.cr-repo-name{
+    margin-top: 48px;
+}
+
+.fe-form .form-control,
+.fe-form .ui.selection.dropdown,
+.fe-form .ui.selection.active.dropdown .menu{
+    background-color: #fafafa;
+    border: 0;
+    font-size: 1rem;
+}
+.fe-form .ui.selection.active.dropdown,
+.fe-form .ui.selection.active.dropdown .menu,
+.fe-form .ui.selection.active.dropdown:hover,
+.fe-form .ui.selection.active.dropdown:hover .menu{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d2d2d2;
+    box-shadow: none !important;
+}
+.fe-form .form-control:focus {
+    /* color: #495057; */
+    /* background-color: #fff; */
+    border-color: initial;
+    /* outline: 0; */
+    box-shadow: none;
+}
+.repo-description{
+    margin-top: 70px;
+}
+.fe-form label{
+    font-weight: bold;
+}
+.repo-description label{
+    font-size: 1.125rem;
+    /* font-weight: bold; */
+}
+.repo-description input{
+    margin-bottom: 22px;
+}
+/* .fe-form .ui.selection.active.dropdown .menu{
+    border: 0;
+} */
+.fe-form input[type="file"]{
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    background-image: url("../icons/upload-2.svg");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center 22%;
+    width: 100%;
+    height: 184px;
+    border: 2px dashed #d2d2d2;
+    text-align: center;
+    display: flex;
+    justify-items: center;;
+}
+
+.fe-form input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.uploads-area-1{
+    /* width: calc(100% - 32px); */
+    width: 100%;
+    height: 184px;
+    border: 2px dashed #d2d2d2;
+    position: relative;
+}
+.uploads-area-1 img{
+    /* vertical-align: middle; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    /* background-color: yellow; */
+    position: relative;
+    top: 50%;
+    background-image: n;
+    margin-top: -20px;
+}
+.form-group{
+    position: relative;
+}
+.form-group #file_label{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;;
+}
+
+.label-button{
+    background: #3498DB;
+    border-radius: 6px;
+    color: #fff;
+    padding: 12px 28px;
+    position: absolute;
+    left: 50%;
+    bottom: 27px;
+    transform: translate(-50%, 0);
+}
+
+
 
 @media only screen and (min-width: 768px) and (min-height: 1000px){
     .row{
@@ -561,7 +685,46 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .other-dropdown{
         display: block;
     }
-    /* .listings img.ads{
-        display: block;
-    } */
+
+
+    /* All Project Item Category */
+
+
+    #all_pro_item_rows{
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-column-gap: 10px;
+    }
+    #all_pro_item_rows .listings{
+        border-bottom: 0;
+    }
+
+
+    /* Create Repository */
+    .fe-form{
+        /* margin-top: 77px; */
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    .cr-repo-name{
+        float: left;
+    }
+    .cr-repo-select{
+        float: right;
+    }
+    .repo-banner{
+        clear: both;
+    }
+    .cr-repo-name, .cr-repo-select{
+        width: 45%;
+        margin-top: 77px;
+    }
+    .label-button{
+        position: relative;
+        bottom: -51px;
+        /* top: 0; */
+    }
+    .fe-form input[type="file"] {
+        background-position: center center;
+    }
 }
