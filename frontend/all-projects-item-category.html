@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container-fluid px-0 py-0 mx-0 my-0" id="fe-allcategories">
-        <div class="row px-0 py-0 mx-0 my-0">
+        <div class="row px-0 py-0 mx-0 my-0" id="report">
             <div class="col-md-12 px-0 py-0 mx-0 my-0 first-col">
                 <nav class="navbar navbar-expand-md navbar-light bg-light px-0 py-0 mx-0 my-0">
                     <a class="navbar-brand" href="#"></a>
@@ -110,6 +110,47 @@
                 </div>
             </div>
             <div class="col-md-12 py-0 my-0 second-col" id="second_column">
+                <input type="checkbox" name="" id="report_paper">
+                <!-- <input type="checkbox" name="" id="close_report"> -->
+                <div class="overlay"></div>
+                <form action="" class="modal-form">
+                    <label for="report_paper" class="close-report-wrapper">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.23814 7.00083L13.7435 1.4955C14.0855 1.15376 14.0855 0.599255 13.7435 0.257507C13.4014 -0.0845334 12.8475 -0.0845334 12.5055 0.257507L7.00015 5.76283L1.49453 0.257507C1.15249 -0.0845334 0.59857 -0.0845334 0.25653 0.257507C-0.08551 0.599255 -0.08551 1.15376 0.25653 1.4955L5.76215 7.00083L0.25653 12.5062C-0.08551 12.8479 -0.08551 13.4024 0.25653 13.7442C0.42755 13.9149 0.651685 14.0004 0.875529 14.0004C1.09937 14.0004 1.32351 13.9149 1.49453 13.7439L7.00015 8.23854L12.5055 13.7439C12.6765 13.9149 12.9006 14.0004 13.1245 14.0004C13.3483 14.0004 13.5724 13.9149 13.7435 13.7439C14.0855 13.4021 14.0855 12.8476 13.7435 12.5059L8.23814 7.00083Z" fill="#696969"/>
+                        </svg>
+                    </label>
+                    <div class="report-container">
+                        <h4>Report this paper</h4>
+                        <div class="form-group">
+                            <label for="exampleInputText1">Name</label>
+                            <input type="text" class="form-control" id="exampleInputText1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputText1">Phone number</label>
+                            <input type="number" class="form-control" id="exampleInputText1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputText1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputText1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect_2">Reason</label>
+                            <select class="form-control" id="exampleFormControlSelect_2">
+                              <option>Select your reason for report</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                        <button class="btn btn-danger">Report Paper</button>
+                    </div>
+                </form>
                 <div class="main-content" id="main_project_item">
                     <div class="row px-0 py-0 mx-0 my-0" id="all_pro_item_rows">
                         <div class="col-xs-12  px-0 py-0 mx-0 my-0 cols">
@@ -148,7 +189,11 @@
                                             <span>(199 reviews)</span>
                                         </div>
                                         <a href="" class="btn btn-default mx-0">Get this paper</a>
-                                        <a href="" class="btn btn-default mx-0">Report this paper</a>
+                                        <!-- <a target="#report" href="" class="btn btn-default mx-0"> -->
+                                        <label for="report_paper" class="btn btn-default mx-0 my-0">Report this paper
+                                        </label>
+                                        <!-- </a> -->
+                                        <!-- <a href="" class="btn btn-default mx-0">Report this paper</a> -->
                                         <a href="" class="btn btn-default mx-0">Follow Author</a>
                                     </div>
                                 </li>
@@ -229,16 +274,16 @@
                                 <label for="load_comments">Load more comments</label>
                                 <hr>
                                 <form action="" class="customer-review-form">
-                                        <div class="ratings-wrapper">
-                                            <p>Select your ratings</p>
-                                            <span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </span>
-                                        </div>
+                                    <div class="ratings-wrapper">
+                                        <p>Select your ratings</p>
+                                        <span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </span>
+                                    </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Name</label>
                                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -293,10 +338,26 @@
         </div>
     </div>
 
+
+
+    <script>
+        document.addEventListener('click', function () {
+            let pageheight = document.getElementsByClassName("container-fluid")[0];
+            if (event.target.matches(".content-wrapper > label")){
+                window.scrollTo(0, 0);
+                pageheight.style.height = "100vh";
+                pageheight.style.overflow = "hidden";
+            }
+            if (event.target.matches(".modal-form > label")){
+                pageheight.style.height = "auto";
+                pageheight.style.overflow = "visible";
+            }
+        })
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../js/all-categories-dropdown.js"></script>
+    <!-- <script src="../js/all-categories-dropdown.js"></script> -->
 
 </body>
 </html>

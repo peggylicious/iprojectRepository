@@ -3,6 +3,9 @@ html{
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
 }
+textarea.form-control{
+    resize: none;
+}
 nav .navbar-brand{
     height: 100%;
     width: 65px;
@@ -298,16 +301,121 @@ article a.btn{
     font-weight: bold;
     font-size: 12px;
 }
-.second-col .main-content .listings .content-wrapper > a{
+.second-col .main-content .listings .content-wrapper > a,
+.second-col .main-content .listings .content-wrapper > label{
     border-radius: 4px;
+    height: 36px;
+    padding: auto;
+    /* line-height: 36px; */
 }
-.second-col .main-content .listings .content-wrapper > a:nth-child(6){
+.second-col .main-content .listings .content-wrapper > label{
     background-color: #fff;
     background: #f14336;
+    font-size: 12px;
+    display: inline-block;
+    color: #fff;
+}
+.second-col .main-content .listings .content-wrapper label{
+    /* pointer-events: none; */
 }
 .second-col .main-content .listings .content-wrapper > a:nth-child(7){
     background: #005073;
 }
+
+/* Report Paper */
+
+#report .second-col > form,
+.overlay,
+input[type="checkbox"]#report_paper {
+    display: none;
+}
+input[type="checkbox"]#report_paper:checked ~ .overlay{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-left: -15px;
+    z-index: 5;
+    top: 64px;
+    /* left: 0; */
+}
+input[type="checkbox"]#report_paper:checked ~ form{
+    height: calc(100vh - 178px);
+    width: 90%;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    border-radius: 6px;
+    padding: 22px 29px 36px 22px;
+}
+.close-report-wrapper{
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    /* background-color: red; */
+    text-align: center;
+    float: right;
+}
+.close-report-wrapper svg{
+    pointer-events: none;
+
+}
+.report-container{
+    clear: both;
+}
+.report-container label{
+    margin-bottom: 3px;
+}
+.report-container .form-control,
+.report-container .form-control:focus{
+    border-width: 0 0 1px 0;
+    border-color: #d2d2d2;
+    border-radius: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding-left: 0;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: 11px;
+}
+.report-container select{
+    padding-left: 0;
+}
+/* .report-container .form-control:focus{
+    border-width: 0 0 1px 0;
+    border-color: #d2d2d2;
+    border-radius: 0;
+    box-shadow: none;
+} */
+.report-container .form-control option{
+    width: 100%;
+    font-size: 14px;
+}
+.report-container button.btn{
+    /* background: #f14336; */
+    font-size: 12px;
+}
+.report-container label{
+    font-size: 12px;
+}
+.modal-form input.form-control{
+    height: 17px;
+    padding: 0;
+}
+.report-container textarea.form-control{
+    height: 48px;
+}
+.report-container .form-group{
+    margin: 0;
+}
+
 .second-col .main-content article{
     padding-top: 16px;
     padding-bottom: 16px;
@@ -698,11 +806,35 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     #all_pro_item_rows .listings{
         border-bottom: 0;
     }
-
+    input[type="checkbox"]#report_paper:checked ~ .overlay{
+        top: 32px;
+    }
+    .modal-form{
+        background-image: url("../icons/reporter.svg");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 40px center;
+        /* padding-left: 80px;
+        padding-right: 80px; */
+    }
+    input[type="checkbox"]#report_paper:checked ~ form {
+        padding: 22px 80px 36px 80px;
+        width: 760px;
+    }
+    .report-container{
+        position: relative;
+        width: 50%;
+        left: 50%;
+        background-image: url("../icons/reporter-bg.svg");
+        background-position: 80px 298px;
+        background-repeat: no-repeat;
+    }
+    .report-container .form-control{
+        background-color: transparent;
+    }
 
     /* Create Repository */
     .fe-form{
-        /* margin-top: 77px; */
         padding-left: 90px;
         padding-right: 90px;
     }
@@ -722,7 +854,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .label-button{
         position: relative;
         bottom: -51px;
-        /* top: 0; */
     }
     .fe-form input[type="file"] {
         background-position: center center;
