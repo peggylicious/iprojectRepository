@@ -802,7 +802,7 @@ border-radius: 4px;
     width: 94px;
 }
 
-/* Paper Preview */
+/* Paper Review */
  .status span{
     display: inline-block;
     width: 81px;
@@ -831,7 +831,6 @@ border-radius: 4px;
     /* background: red; */
 }
 
-
 /* Add Vendor Bank */
 #selectVendorBank option:first-child{
     color: rgba(142, 142, 142, 0.5);
@@ -844,6 +843,134 @@ border-radius: 4px;
     width: 328px;
     color: #fff;
     /* margin: 0 auto 69px auto; */
+}
+
+
+/* Paper Preview */
+.stats{
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 52px;
+    display: flex;
+}
+.preview-status-content{
+    width: calc(100% - 32px);
+    margin: 0 auto;
+
+}
+.stats p{
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+.visible-stat{
+    border-bottom: 3px solid #f4772e;
+}
+.stats span{
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+}
+.visible-stat span,
+.visible-stat .stats-toggle-wrapper input:checked ~ .preview-switch label:before{
+    background: #f4772e;
+}
+.preview-switch{
+    width: 78px;
+    height: 30px;
+    background-color: #f2f2f2;
+}
+.preview-switch label{
+    width: 100%;
+    height: 30px;
+    background-color: #c4c4c4;
+    position: relative;
+}
+/* .visible-stat .preview-switch label:before{
+    content: "No";
+} */
+
+.preview-switch label:before{
+    content: "No";
+    display: block;
+    width: 41px;
+    height: 100%;
+    line-height: 30px;
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.stats-toggle-wrapper input:checked ~ .preview-switch label:before{
+    transform: translateX(37px);
+    color: #fff;
+    /* background: #f4772e; */
+}
+.stats-toggle-wrapper input:checked ~ .preview-switch label:before{
+    content: "Yes";
+}
+.all-category-section .stats-toggle-wrapper,
+.all-category-section .stats-wrapper{
+    display: block;
+}
+#preview-status-container.all-category-row.row{
+    /* background-color: #fafafa;
+    padding-top: 41px;
+    padding-bottom: 41px; */
+}
+
+.visible-stat .reflector::before{
+    content: "No"; /* Reactively changes value of preview switch */
+    font-weight: 600;
+    font-size: 16px;
+}
+.visible-stat .stats-toggle-wrapper input:checked ~ .reflector::before{
+    content: "Yes"; /* Reactively changes value of preview switch */
+}
+.approved-stat .reflector::before{
+    content: "Rejected"; /* Reactively changes value of preview switch */
+    font-weight: 600;
+    font-size: 16px;
+}
+.approved-stat .stats-toggle-wrapper input:checked ~ .reflector::before{
+    content: "Approved"; /* Reactively changes value of preview switch */
+}
+.time-stat span,
+.time-stat .stats-info{
+    background: #1bc943;
+}
+.time-stat{
+    border-bottom: 3px solid #1bc943;
+}
+.upload-stat span,
+.upload-stat .stats-info{
+    background: #f83245;
+}
+.upload-stat{
+    border-bottom: 3px solid #f83245;
+}
+.stats-wrapper .stats-info{
+    border-radius: 2px;
+    text-align: center;
+    color: #fff;
+    padding: 6px 5px;
+}
+.stats-wrapper .reflector{
+    margin-bottom: 20px;
+}
+.approved-stat{
+    border-bottom: 3px solid #3c44b1;
+}
+.approved-stat span,
+.approved-stat .stats-toggle-wrapper input:checked ~ .preview-switch label:before{
+    background: #3c44b1;
+}
+.preview-status-content h3{
+    font-size: 0.875rem;
 }
 @media only screen and (max-width: 699px){
     input#toggle-me:checked ~ .container-fluid .move-down{
@@ -1328,6 +1455,28 @@ border-radius: 4px;
     }
     #add_new_category_page form button.btn[type="submit"]{
         margin-top: 31px;
+    }
+
+    /* Preview  */
+    .stats{
+        max-width: 230px;
+    }
+    /* .move-down #preview-status-container .preview-status-column{
+        padding-left: 20px;
+        padding-right: 20px;
+    } */
+    #preview-status-container .preview-status-column{
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+    #preview-status-container.all-category-row.row{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .preview-status-content h3{
+        font-size: 1.375rem;
     }
 }
 
