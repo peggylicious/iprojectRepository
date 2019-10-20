@@ -34,7 +34,7 @@ input.form-control:focus{
 }
 .container-fluid{
     height: 100vh;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 .row{
     height: 100vh;
@@ -63,7 +63,8 @@ nav.navbar{
 .col-sm.signup-wrapper, .col-sm.signin-wrapper{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow-y: scroll;
 }
 .col-sm.signup-wrapper{
     top: 100%;
@@ -153,9 +154,15 @@ section{
     border-bottom: 1px solid #d2d3d3;
     border-top: 0px solid #d2d3d3;
     /* width: calc(50% - 14px); */
-    width: calc(50% - 24px);
+    width: calc(50% - 20px);
     margin-top: 5px;
     margin-bottom: 0px;
+    /* margin-left: 0;
+    margin-right: 0; */
+}
+.page-divider span{
+    width: 20px;
+    /* background-color: red; */
 }
 .signup-wrapper .page-divider hr{
     border-bottom: 1px solid #fff;
