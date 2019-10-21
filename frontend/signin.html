@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <input type="checkbox" name="" id="toggle_signup_1">
+        <input type="checkbox" class="d-none" name="" id="toggle_signup_1">
         <div class="row my-auto">
             <input class="d-none" type="checkbox" name="" id="toggle_signin">
             <input class="d-none" type="checkbox" name="" id="toggle_signup">
@@ -33,10 +33,9 @@
                     <div class="page-divider d-flex align-items-center">
                         <hr>
                         <span>OR</span>
-                        <!-- <span>OR</span> -->
                         <hr>
                     </div>
-                    <form action="">
+                    <form action="" class="login-form">
                         <h4>SIGN UP USING YOUR EMAIL ADDRESS</h4>
                         <div class="form-group general-input">
                             <input class="form-control" type="email" placeholder="EMAIL ADDRESS" required>
@@ -80,7 +79,7 @@
                         <span>OR</span>
                         <hr>
                     </div>
-                    <form action="">
+                    <form action="" class="login-form">
                         <h4>SIGN IN WITH EMAIL</h4>
                         <div class="form-group general-input">
                             <input class="form-control" type="email" placeholder="EMAIL ADDRESS" required>
@@ -89,7 +88,7 @@
                             <input class="form-control" type="password" name="" id="" placeholder="PASSWORD" required>
                         </div>
                         <div class="text-center">
-                            <input type="submit" value="SIGN IN" class="btn btn-default" required>
+                            <input type="submit" value="SIGN IN" class="btn btn-default">
                         </div>
                     </form>
                     <div class="text-center forgotten-pass">
