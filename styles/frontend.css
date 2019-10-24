@@ -23,11 +23,16 @@ nav .navbar-brand{
     height: 48px;
     background-color: red;
 }
-nav.navbar{
+
+/* ---------------------------- */
+/* NavBar */
+/* ---------------------------- */
+
+nav.navbar.main-nav{
     height: 48px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
-.navbar button.navbar-toggler{
+.navbar.main-nav button.navbar-toggler{
     position: relative;
     width: 55px;
     height: 100%;
@@ -37,14 +42,14 @@ nav.navbar{
     justify-content: center;
     border: 0;
 }
-.navbar button.navbar-toggler span{
+.navbar.main-nav button.navbar-toggler span{
     position: relative;
     height: 2px;
     width: 18px;
     background: #000;
 }
-.navbar button.navbar-toggler span:before,
-.navbar button.navbar-toggler span:after{
+.navbar.main-nav button.navbar-toggler span:before,
+.navbar.main-nav button.navbar-toggler span:after{
     position: absolute;
     height: 2px;
     width: 18px;
@@ -52,17 +57,23 @@ nav.navbar{
     content: "";
     left: 0;
 }
-.navbar button.navbar-toggler span:before{
+.navbar.main-nav button.navbar-toggler span:before{
     top: 5px;
 }
-.navbar button.navbar-toggler span:after{
+.navbar.main-nav button.navbar-toggler span:after{
     top: -5px;
 }
+.main-nav .collapsing{
+    transition: none;
+}
 
+/* ---------------------------- */
 /* Toggler actions */
-.navbar button.navbar-toggler:hover,
-.navbar button.navbar-toggler:focus,
-.navbar button.navbar-toggler:active{
+/* ---------------------------- */
+
+.navbar.main-nav button.navbar-toggler:hover,
+.navbar.main-nav button.navbar-toggler:focus,
+.navbar.main-nav button.navbar-toggler:active{
     border: 0;
     outline: 0;
 }
@@ -70,10 +81,15 @@ nav.navbar{
 .here{
     background-color: pink;
 }
-.collapse.navbar-collapse{
-    /* background-color: red; */
+.main-nav.collapse.navbar-collapse{
     background-color: #fafafa;
 }
+
+
+/* ---------------------------- */
+/* Verification page */
+/* ---------------------------- */
+
 .awaiting-decor,
 .verification-image-container{
     width: 100%;
@@ -87,8 +103,6 @@ nav.navbar{
 }
 .second-col .verification-image-container{
     background-image: url("../../icons/hero-image-verification\ page.svg");
-    /* background-color: red; */
-    /* background-position: center; */
 }
 .awaiting-text p{
     font-size: 1.25rem;
@@ -122,34 +136,21 @@ nav.navbar{
     border: none;
 }
 
+
+/* ---------------------------- */
 /* All Categories */
-#fe-allcategories .row,
-/* #allcategories.row .first-col, */
-#fe-allcategories .row .second-col{
-    height: auto;
-}
-/* #allcategories.row .second-col{
-    height: auto;
-} */
-#fe-allcategories .row .second-col{
-    /* background-color: green; */
-}
+/* ---------------------------- */
+
 
 .search-area{
-    /* min-width: 328px; */
     width: 100%;
     padding-left: 17px;
     padding-right: 17px;
-    /* background-color: red; */
-    /* margin-left: 47px; */
-    /* left: 17px; */
     margin: 0 auto;
     position: absolute;
     top: 48px;
 }
-.search-area .dropdown{
-    /* display: flex; */
-}
+
 .search-area .dropdown a.btn{
     width: 50px;
     height: 35px;
@@ -164,10 +165,8 @@ nav.navbar{
 .search-box{
     display: flex;
     width: calc(100% - 50px);
-    /* background-color: yellow; */
 }
 .search-area .dropdown input{
-    /* width: 47px; */
     border: 0;
     width: calc(100% - 47px);
     height: 35px;
@@ -183,8 +182,10 @@ nav.navbar{
 
 
 
-
+/* ---------------------------- */
 /* Topic Areas */
+/* ---------------------------- */
+
 
 .main-content{
     margin-top: 60px;
@@ -196,9 +197,7 @@ nav.navbar{
     list-style-type: none;
     padding-left: 17px;
     padding-right: 17px;
-    /* padding-bottom: 25px; */
     margin: 0;
-    /* border-bottom: 1px solid #d2d2d2; */
 }
 .main-content ul li{
     list-style-type: none;
@@ -213,10 +212,8 @@ nav.navbar{
     color: #3498db;
 }
 .topic-areas span{
-    /* background-color: red; */
     font-size: 14px;
     width: 56px;
-    /* display: inline-block; */
 }
 .topic-areas span:not(:last-child){
     border-right: 1px solid #000;
@@ -226,7 +223,6 @@ nav.navbar{
     width: 12px;
     height: 12px;
     background-color: grey;
-    /* margin-left: 12px; */
     margin-right: 6px;
 }
 .topic-areas span:not(:first-child) span{
@@ -240,7 +236,6 @@ nav.navbar{
     width: 12px;
     height: 12px;
     background-color: yellow;
-    /* margin-left: 9px; */
     margin-right: 9px;
 }
 .ratings-wrapper span:not(:first-child) span{
@@ -248,7 +243,6 @@ nav.navbar{
 }
 .listings a.btn,
 article a.btn{
-    /* width: 89.89px; */
     font-size: 12px;
     background: #3498DB;
     border-radius: 2px;
@@ -267,7 +261,11 @@ article a.btn{
 }
 
 
+
+/* ---------------------------- */
 /* All Project Item Category */
+/* ---------------------------- */
+
 .row .col.second-col{
     padding-left: 16px;
     padding-right: 16px;
@@ -306,7 +304,6 @@ article a.btn{
     border-radius: 4px;
     height: 36px;
     padding: auto;
-    /* line-height: 36px; */
 }
 .second-col .main-content .listings .content-wrapper > label{
     background-color: #fff;
@@ -322,7 +319,11 @@ article a.btn{
     background: #005073;
 }
 
+
+/* ---------------------------- */
 /* Report Paper */
+/* ---------------------------- */
+
 
 #report .second-col > form,
 .overlay,
@@ -338,7 +339,6 @@ input[type="checkbox"]#report_paper:checked ~ .overlay{
     margin-left: -15px;
     z-index: 5;
     top: 64px;
-    /* left: 0; */
 }
 input[type="checkbox"]#report_paper:checked ~ form{
     height: calc(100vh - 178px);
@@ -358,7 +358,6 @@ input[type="checkbox"]#report_paper:checked ~ form{
     width: 24px;
     height: 24px;
     line-height: 20px;
-    /* background-color: red; */
     text-align: center;
     float: right;
 }
@@ -388,18 +387,12 @@ input[type="checkbox"]#report_paper:checked ~ form{
 .report-container select{
     padding-left: 0;
 }
-/* .report-container .form-control:focus{
-    border-width: 0 0 1px 0;
-    border-color: #d2d2d2;
-    border-radius: 0;
-    box-shadow: none;
-} */
+
 .report-container .form-control option{
     width: 100%;
     font-size: 14px;
 }
 .report-container button.btn{
-    /* background: #f14336; */
     font-size: 12px;
 }
 .report-container label{
@@ -478,7 +471,6 @@ input[type="checkbox"]#load_comments{
     padding-bottom: 38px;
 }
 .customer-reviews-wrapper label{
-    /* background-color: blue; */
     color: #696969;
     font-size: 12px;
 }
@@ -500,8 +492,10 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     margin-left: 0px;
 }
 
-
+/* --------------------------------- */
 /* Create Repository */
+/* --------------------------------- */
+
 #create_repo .row{
     height: auto;
     padding-left: 16px;
@@ -540,10 +534,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     box-shadow: none !important;
 }
 .fe-form .form-control:focus {
-    /* color: #495057; */
-    /* background-color: #fff; */
     border-color: initial;
-    /* outline: 0; */
     box-shadow: none;
 }
 .repo-description{
@@ -554,17 +545,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
 }
 .repo-description label{
     font-size: 1.125rem;
-    /* font-weight: bold; */
 }
 .repo-description input{
     margin-bottom: 22px;
 }
-/* .fe-form .ui.selection.active.dropdown .menu{
-    border: 0;
-} */
 .fe-form input[type="file"]{
-    /* visibility: hidden; */
-    /* opacity: 0; */
     background-image: url("../icons/upload-2.svg");
     background-repeat: no-repeat;
     background-size: 40px;
@@ -588,12 +573,10 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     position: relative;
 }
 .uploads-area-1 img{
-    /* vertical-align: middle; */
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40px;
-    /* background-color: yellow; */
     position: relative;
     top: 50%;
     background-image: n;
@@ -644,20 +627,20 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         width: 50%;
         font-size: 16px;
     }
-    nav .navbar-brand{
+    .main-nav .navbar-brand{
         width: 136px;
         margin-left: 24px;
     }
-    .collapse.navbar-collapse{
+    .main-nav .collapse.navbar-collapse{
         justify-content: flex-end !important;
         align-items: flex-end;
         width: 100%;
         /* align-self: right; */
     }
-    .collapse.navbar-collapse ul{
+    .main-nav .collapse.navbar-collapse ul{
         padding-left: 26px;
     }
-    nav .navbar-nav{
+    .main-nav .navbar-nav{
         width: 100%;
         padding-right: 26px;
 
@@ -665,7 +648,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         justify-content: flex-end;
         justify-self: right !important;
     }
-    .navbar button.navbar-toggler{
+    .navbar.main-nav button.navbar-toggler{
         display: none;
     }
     .awaiting-decor, .verification-image-container{
@@ -702,11 +685,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     #verification-page .awaiting-text form input{
         margin: 21px 0 0 0;
     }
-    .navbar-nav li{
+    .main-nav .navbar-nav li{
         display: flex;
         align-items: center;
     }
-    .collapse.navbar-collapse{
+    .main-nav .collapse.navbar-collapse{
         background-color: #fff;
     }
     .sprout-1{

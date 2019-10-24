@@ -7,15 +7,16 @@
     <title>Awaiting Activation</title>
     <link rel="stylesheet" href="../styles/frontend.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-fluid px-0 py-0 mx-0 my-0" id="fe-allcategories">
         <div class="row px-0 py-0 mx-0 my-0" id="report">
             <div class="col-md-12 px-0 py-0 mx-0 my-0 first-col">
-                <nav class="navbar navbar-expand-md navbar-light bg-light px-0 py-0 mx-0 my-0">
+                <nav class="navbar navbar-expand-md navbar-light bg-light px-0 py-0 mx-0 my-0 main-nav">
                     <a class="navbar-brand" href="#"></a>
 
-                    <div class="search-area">
+                    <!-- <div class="search-area">
                         <div class="dropdown show d-flex">
                             <a class="btn btn-secondary dropdown-toggle d-none d-sm-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 All
@@ -32,7 +33,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -55,25 +56,13 @@
                     </div>
                 </nav>
                 <div class="other-dropdown">
-                    <nav class="navbar navbar-light px-0 py-0 mx-0 my-0" id="categories-nav">
+                    <!-- <nav class="navbar navbar-light px-0 py-0 mx-0 my-0" id="categories-nav">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
                             <div class="collapse navbar-collapse" id="secondNav" data-hover="dropdown">
                                 <ul class="nav navbar-nav mr-auto">
-                                <!-- <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                          <li><a href="#">Action</a></li>
-                                          <li><a href="#">Another action</a></li>
-                                          <li><a href="#">Something else here</a></li>
-                                          <li class="divider"></li>
-                                          <li><a href="#">Separated link</a></li>
-                                          <li class="divider"></li>
-                                          <li><a href="#">One more separated link</a></li>
-                                        </ul>
-                                </li> -->
                                 <li class="nav-item">
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#thirdNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                         <p>Categories</p>
@@ -106,7 +95,99 @@
                                 </li>
                                 </ul>
                             </div>
-                    </nav>
+                    </nav> -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#">NavBar</a> -->
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="https://github.com/fontenele/bootstrap-navbar-dropdowns" target="_blank">GitHub Project</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
+                                <ul class="dropdown-menu multi-level">
+                                    <!-- <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li> -->
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-submenu">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Action</a></li>
+                                                            <li><a href="#">Another action</a></li>
+                                                            <li><a href="#">Something else here</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">Separated link</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">One more separated link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="dropdown-submenu">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">Action</a></li>
+                                                            <li><a href="#">Another action</a></li>
+                                                            <li><a href="#">Something else here</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">Separated link</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#">One more separated link</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
                 </div>
             </div>
             <div class="col-md-12 py-0 my-0 second-col" id="second_column">
@@ -178,12 +259,12 @@
                                             </span>
                                         </div>
                                         <div class="ratings-wrapper">
-                                            <span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+                                            <span class="all-ratings" id="">
+                                                <span class="rate-box"></span>
+                                                <span class="rate-box"></span>
+                                                <span class="rate-box"></span>
+                                                <span class="rate-box"></span>
+                                                <span class="rate-box"></span>
                                             </span>
                                             <span class="ratings">5.0</span>
                                             <span>(199 reviews)</span>
@@ -240,12 +321,12 @@
                                             <span>John Doe</span>
                                         </div>
                                         <div class="ratings-wrapper">
-                                            <span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+                                            <span class="">
+                                                <span class=""></span>
+                                                <span class=""></span>
+                                                <span class=""></span>
+                                                <span class=""></span>
+                                                <span class=""></span>
                                             </span>
                                             <!-- <span class="ratings">5.0</span> -->
                                             <time datetime="2019-09-12 19:00">12/09/2019</time>
@@ -276,12 +357,12 @@
                                 <form action="" class="customer-review-form">
                                     <div class="ratings-wrapper">
                                         <p>Select your ratings</p>
-                                        <span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
+                                        <span class="all-ratings">
+                                            <span class="rate-box"></span>
+                                            <span class="rate-box"></span>
+                                            <span class="rate-box"></span>
+                                            <span class="rate-box"></span>
+                                            <span class="rate-box"></span>
                                         </span>
                                     </div>
                                     <div class="form-group">
@@ -357,7 +438,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- <script src="../js/all-categories-dropdown.js"></script> -->
+    <script src="../js/ratings.js"></script>
 
 </body>
 </html>
