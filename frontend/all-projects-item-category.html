@@ -7,7 +7,9 @@
     <title>Awaiting Activation</title>
     <link rel="stylesheet" href="../styles/frontend.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 <body>
     <div class="container-fluid px-0 py-0 mx-0 my-0" id="fe-allcategories">
@@ -16,7 +18,7 @@
                 <nav class="navbar navbar-expand-md navbar-light bg-light px-0 py-0 mx-0 my-0 main-nav">
                     <a class="navbar-brand" href="#"></a>
 
-                    <!-- <div class="search-area">
+                    <div class="search-area">
                         <div class="dropdown show d-flex">
                             <a class="btn btn-secondary dropdown-toggle d-none d-sm-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 All
@@ -27,13 +29,13 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                             <div class="search-box">
-                                <input type="search" name="" id="">
+                                <input type="search" name="" id="" class="top-nav-search">
                                 <a href="" class="btn search-link rounded-0">
                                     <img src="../images/search-magnifier.png" alt="">
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -56,143 +58,117 @@
                     </div>
                 </nav>
                 <div class="other-dropdown">
-                    <!-- <nav class="navbar navbar-light px-0 py-0 mx-0 my-0" id="categories-nav">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="secondNav" data-hover="dropdown">
-                                <ul class="nav navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#thirdNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <p>Categories</p>
-                                    </button>
-                                    <div class="collapse navbar-collapse" id="thirdNav" data-hover="dropdown">
-                                        <ul class="nav navbar-nav mr-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Link</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Link</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Link</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Link</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                </li>
-                                <li class="profile-pic">
-                                    <img src="../../images/small-user.png" alt="">
-                                </li>
-                                </ul>
-                            </div>
-                    </nav> -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="" data-target="#first_step_dropdown">
+                            All Categories
                             <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                            <div class="icon-wrapper">
+                                <span class="other-nav-toggler-icon"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <div class="collapse navbar-collapse first-level" id="first_step_dropdown">
+                                    <ul class="nav navbar-nav">
+                                        <li class="second-level dropdown-list-item">
+                                            <a href="#" class="dropdown-toggle black-anchor">Categories</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-menu-list">
+                                                    <ul class="dropdown-menu next-level">
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemistry</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemical Pathology</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="second-level dropdown-list-item">
+                                            <a href="#" class="dropdown-toggle black-anchor">Categories</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-menu-list">
+                                                    <ul class="dropdown-menu next-level">
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemistry</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemical Pathology</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="dropdown-list-item">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Item types <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">One more separated link</a></li>
+                                                <li class="dropdown-submenu">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                        <li class="divider"></li>
+                                                        <li class="dropdown-submenu">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-submenu">
+                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="#">Action</a></li>
+                                                                        <li><a href="#">Another action</a></li>
+                                                                        <li><a href="#">Something else here</a></li>
+                                                                        <li class="divider"></li>
+                                                                        <li><a href="#">Separated link</a></li>
+                                                                        <li class="divider"></li>
+                                                                        <li><a href="#">One more separated link</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li> -->
+                                    </ul>
+                                </div>
                         </button>
                         <!-- <a class="navbar-brand" href="#">NavBar</a> -->
                     </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="https://github.com/fontenele/bootstrap-navbar-dropdowns" target="_blank">GitHub Project</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 1 <b class="caret"></b></a>
-                                <ul class="dropdown-menu multi-level">
-                                    <!-- <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li> -->
-                                    <li class="dropdown-submenu">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#">Action</a></li>
-                                                            <li><a href="#">Another action</a></li>
-                                                            <li><a href="#">Something else here</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Separated link</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">One more separated link</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                    <li class="dropdown-submenu">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                            <li class="divider"></li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="dropdown-submenu">
-                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a href="#">Action</a></li>
-                                                            <li><a href="#">Another action</a></li>
-                                                            <li><a href="#">Something else here</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">Separated link</a></li>
-                                                            <li class="divider"></li>
-                                                            <li><a href="#">One more separated link</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
+
                 </div>
             </div>
             <div class="col-md-12 py-0 my-0 second-col" id="second_column">
                 <input type="checkbox" name="" id="report_paper">
-                <!-- <input type="checkbox" name="" id="close_report"> -->
                 <div class="overlay"></div>
                 <form action="" class="modal-form">
                     <label for="report_paper" class="close-report-wrapper">
@@ -270,11 +246,8 @@
                                             <span>(199 reviews)</span>
                                         </div>
                                         <a href="" class="btn btn-default mx-0">Get this paper</a>
-                                        <!-- <a target="#report" href="" class="btn btn-default mx-0"> -->
                                         <label for="report_paper" class="btn btn-default mx-0 my-0">Report this paper
                                         </label>
-                                        <!-- </a> -->
-                                        <!-- <a href="" class="btn btn-default mx-0">Report this paper</a> -->
                                         <a href="" class="btn btn-default mx-0">Follow Author</a>
                                     </div>
                                 </li>
@@ -328,7 +301,6 @@
                                                 <span class=""></span>
                                                 <span class=""></span>
                                             </span>
-                                            <!-- <span class="ratings">5.0</span> -->
                                             <time datetime="2019-09-12 19:00">12/09/2019</time>
                                         </div>
                                         <p class="user-post">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias tempore adipisci maxime voluptates, mollitia aspernatur. Temporibus quas id placeat facilis deserunt explicabo! Expedita quas distinctio cupiditate dolor tenetur placeat maiores.</p>
@@ -346,7 +318,6 @@
                                                 <span></span>
                                                 <span></span>
                                             </span>
-                                            <!-- <span class="ratings">5.0</span> -->
                                             <time datetime="2019-09-12 19:00">12/09/2019</time>
                                         </div>
                                         <p class="user-post">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias tempore adipisci maxime voluptates, mollitia aspernatur. Temporibus quas id placeat facilis deserunt explicabo! Expedita quas distinctio cupiditate dolor tenetur placeat maiores.</p>
@@ -404,8 +375,6 @@
                                                 John Doe
                                             </span>
                                         </div>
-                                        <!-- <div class="ratings-wrapper">
-                                        </div> -->
                                         <a href="" class="btn btn-default mx-0">Read more</a>
                                     </div>
                                 </li>
@@ -438,8 +407,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <!-- <script src="../js/all-categories-dropdown.js"></script> -->
     <script src="../js/ratings.js"></script>
 
 </body>

@@ -32,7 +32,8 @@ nav.navbar.main-nav{
     height: 48px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
 }
-.navbar.main-nav button.navbar-toggler{
+.navbar.main-nav button.navbar-toggler,
+.navbar-header .navbar-toggle .other-nav-toggler-icon{
     position: relative;
     width: 55px;
     height: 100%;
@@ -42,14 +43,17 @@ nav.navbar.main-nav{
     justify-content: center;
     border: 0;
 }
-.navbar.main-nav button.navbar-toggler span{
+.navbar.main-nav button.navbar-toggler span,
+.navbar-header .navbar-toggle .other-nav-toggler-icon{
     position: relative;
     height: 2px;
     width: 18px;
     background: #000;
 }
 .navbar.main-nav button.navbar-toggler span:before,
-.navbar.main-nav button.navbar-toggler span:after{
+.navbar.main-nav button.navbar-toggler span:after,
+.navbar-header .navbar-toggle .other-nav-toggler-icon:before,
+.navbar-header .navbar-toggle .other-nav-toggler-icon:after{
     position: absolute;
     height: 2px;
     width: 18px;
@@ -57,10 +61,12 @@ nav.navbar.main-nav{
     content: "";
     left: 0;
 }
-.navbar.main-nav button.navbar-toggler span:before{
+.navbar.main-nav button.navbar-toggler span:before,
+.navbar-header .navbar-toggle .other-nav-toggler-icon:before{
     top: 5px;
 }
-.navbar.main-nav button.navbar-toggler span:after{
+.navbar.main-nav button.navbar-toggler span:after,
+.navbar-header .navbar-toggle .other-nav-toggler-icon:after{
     top: -5px;
 }
 .main-nav .collapsing{
@@ -720,9 +726,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
        position: relative;
        top: unset;
     }
-    .search-area .dropdown{
-        /* display: flex; */
-    }
+
     .search-area .dropdown a.btn{
         width: 50px;
         height: 35px;
@@ -734,10 +738,24 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 0;
     }
+    .search-area .btn:focus, .search-area .btn-secondary:focus,
+    .search-area .show>.btn-secondary.dropdown-toggle:focus,
+    .search-area .show>.btn-secondary.dropdown-toggle,
+    .search-area .show>.btn.dropdown-toggle:focus,
+    .search-area .show>.btn.dropdown-toggle,
+    .search-area .btn-secondary,
+    .search-area .btn{
+        box-shadow: none !important;
+        border: 0 !important;
+    }
     .search-box{
         display: flex;
         width: calc(100% - 50px);
         /* background-color: yellow; */
+    }
+    .top-nav-search:focus{
+        box-shadow: none !important;
+        border: 0 !important;
     }
     .search-area .dropdown input{
         /* width: 47px; */
@@ -773,8 +791,140 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         font-size: 14px;
         width: 56px;
     }
+    /* ------------------------- */
+    /* Other Dropdown */
     .other-dropdown{
         display: block;
+        height: 32px;
+        width: 100%;
+        background: #00618c;
+        position: relative;
+
+    }
+    .other-dropdown .navbar-header .navbar-toggle{
+        height: 32px;
+        /* width: 40px; */
+        border: none;
+        outline: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+    .other-dropdown .navbar-header{
+        padding-left: 84px;
+    }
+    .second-level{
+        position: relative;
+        /* background-color: green; */
+    }
+    .second-level .dropdown-toggle{
+        position: relative;
+        padding-left: 64px;
+        padding-right: 76px;
+        height: 54px;
+        line-height: 54px;
+        /* padding: 19px 80px 19px 10px;; */
+    }
+    .second-level:hover .dropdown-toggle{
+        /* height: 54px;
+        line-height: 54px; */
+    }
+    .second-level:hover .dropdown-toggle,
+    .black-anchor:hover{
+        color: #000;
+        /* font-weight: bold; */
+        font-size: 16px;
+        text-decoration: none;
+        /* display: inline-block; */
+    }
+    .second-level .dropdown-toggle::before,
+    .second-level .dropdown-toggle:after{
+        content: " "; /* Removes default caret */
+        border: none;
+    }
+    .first-level{
+        background-color: #fff;
+        border-bottom: 1px solid grey;
+    }
+    .first-level .second-level:hover >  .dropdown-menu{
+        display: block;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        color: #000;
+        padding-left: 100px;
+
+    }
+    .first-level .navbar-nav{
+        /* padding-left: 10px;
+        padding-right: 84px; */
+    }
+    .navbar-header .navbar-toggle {
+        color: #fff;
+    }
+    .navbar-header .navbar-toggle .other-nav-toggler-icon,
+    .navbar-header .navbar-toggle .other-nav-toggler-icon::before,
+    .navbar-header .navbar-toggle .other-nav-toggler-icon::after{
+        background-color: #fff;
+    }
+
+    .navbar-header .icon-wrapper{
+        margin-left: 5px;
+    }
+    .dropdown-menu-list .dropdown-menu{
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        /* padding-left: 8em;
+        padding-right: 8em; */
+    }
+    .navbar-header:hover  .collapse.navbar-collapse{
+        display: block;
+        top: 32px;
+        position: absolute;
+        left: 0;
+        /* padding-left: 84px; */
+        width: 100%;
+        /* background-color: #fafafa; */
+    }
+    .other-dropdown .dropdown-list-item{
+        text-align: left;
+        display: flex;
+    }
+    .dropdown-list-item > .dropdown-menu{
+        border: none;
+    }
+    .second-level:hover .dropdown-toggle,
+    .second-level:hover .dropdown-toggle ~ .dropdown-menu{
+        background-color: #fafafa;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+    .black-anchor{
+        color: #000;
+        font-size: 16px;
+    }
+    .dropdown-menu.next-level{
+        background-color: transparent;
+    }
+    .next-level-list .black-anchor{
+        min-width: 80px;
+        /* font-weight: bold; */
+    }
+    .next-level-list{
+        background-color: #fff;
+        padding: 3px 6px;
+        border-radius: 6px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #d2d2d2;
+    }
+
+
+
+
+    .other-nav-toggler-icon{
     }
 
 
