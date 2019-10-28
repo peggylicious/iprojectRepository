@@ -346,7 +346,7 @@ input[type="checkbox"]#report_paper:checked ~ .overlay{
     z-index: 5;
     top: 64px;
 }
-input[type="checkbox"]#report_paper:checked ~ form{
+input[type="checkbox"]#report_paper:checked ~ .modal-form{
     height: calc(100vh - 178px);
     width: 90%;
     background-color: #fff;
@@ -358,6 +358,7 @@ input[type="checkbox"]#report_paper:checked ~ form{
     z-index: 10;
     border-radius: 6px;
     padding: 22px 29px 36px 22px;
+    overflow-y: scroll;
 }
 .close-report-wrapper{
     display: block;
