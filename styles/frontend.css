@@ -2,7 +2,9 @@
 html{
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
+    /* font-size: calc(0.85em + 1vw) */
 }
+/* html {  } */
 textarea.form-control{
     resize: none;
 }
@@ -95,7 +97,13 @@ nav.navbar.main-nav{
 /* ---------------------------- */
 /* Verification page */
 /* ---------------------------- */
-
+.container-fluid.verification-container{
+   /* overflow-y: scroll; */
+   padding-bottom: 30px;
+}
+.verification-container .row{
+    height: auto;
+}
 .awaiting-decor,
 .verification-image-container{
     width: 100%;
@@ -117,6 +125,7 @@ nav.navbar.main-nav{
     margin: 0 auto;
     text-align: center;
 }
+
 .awaiting-text .account-status{
     font-size: 0.75rem;
     font-weight: normal;
@@ -124,9 +133,13 @@ nav.navbar.main-nav{
 .awaiting-text .account-status span{
     color: #3498db;
 }
-#verification-page .awaiting-text a{
+.awaiting-text .call-attention{
+    font-size: 14px;
+    font-weight: bold;
+    color: #f14336;
+}
+#verification-page .awaiting-text .btn{
     width: 236px;
-    /* height: 36px; */
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -134,8 +147,7 @@ nav.navbar.main-nav{
     margin: 9px auto 0 auto;
     font-weight: bold;
     font-size: 12px;
-    /* line-height: 36px; */
-    border-radius: 0;
+    border-radius: 4px;
     text-transform: uppercase;
     color: #fff;
     background: #3498db;
@@ -627,12 +639,18 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         /* display: flex; */
         height: calc(100% - 48px);
     }
+    .row .second-col{
+        padding-left: 84px;
+        padding-right: 84px;
+    }
     .awaiting-text{
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 0; /* Sets the padding for this area to align with other page columns*/
+        top: 112px;
         width: 50%;
         font-size: 16px;
+        padding: 0 84px;
+        /* margin-top: 112px; */
     }
     .main-nav .navbar-brand{
         width: 136px;
@@ -678,7 +696,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .awaiting-text p{
         font-size: 2em;
         /* width: 533px; */
-        margin-top: 112px;
+        /* margin-top: 112px; */
         text-align: left;
         width: 100%;
         background-color: transparent;
@@ -691,6 +709,9 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     #verification-page .awaiting-text form input{
         margin: 21px 0 0 0;
+    }
+    #verification-page .awaiting-text .btn{
+        margin: 9px 0 0 0;
     }
     .main-nav .navbar-nav li{
         display: flex;
