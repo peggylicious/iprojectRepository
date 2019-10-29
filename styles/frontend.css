@@ -4,7 +4,6 @@ html{
     font-family: 'Nunito', sans-serif;
     /* font-size: calc(0.85em + 1vw) */
 }
-/* html {  } */
 textarea.form-control{
     resize: none;
 }
@@ -14,9 +13,7 @@ nav .navbar-brand{
     background: #3498db;
 }
 .row{
-    /* height: 100vh; */
     height: 100vh;
-    /* background-color: red; */
     position: relative;
 }
 
@@ -330,9 +327,6 @@ article a.btn{
     display: inline-block;
     color: #fff;
 }
-.second-col .main-content .listings .content-wrapper label{
-    /* pointer-events: none; */
-}
 .second-col .main-content .listings .content-wrapper > a:nth-child(7){
     background: #005073;
 }
@@ -642,14 +636,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         padding-left: 84px;
         padding-right: 84px;
     }
-    .awaiting-text{
-        position: absolute;
-        right: 0; /* Sets the padding for this area to align with other page columns*/
-        top: 112px;
-        width: 50%;
-        font-size: 16px;
-        padding: 0 84px;
-    }
+
     .main-nav .navbar-brand{
         width: 136px;
         margin-left: 24px;
@@ -670,6 +657,27 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     .navbar.main-nav button.navbar-toggler{
         display: none;
+    }
+
+    .main-nav .navbar-nav li{
+        display: flex;
+        align-items: center;
+    }
+    .main-nav .collapse.navbar-collapse{
+        background-color: #fff;
+    }
+
+
+    /* ------------------------------------ */
+    /* Verification */
+    /* ------------------------------------ */
+    .awaiting-text{
+        position: absolute;
+        right: 0; /* Sets the padding for this area to align with other page columns*/
+        top: 112px;
+        width: 50%;
+        font-size: 16px;
+        padding: 0 84px;
     }
     .awaiting-decor, .verification-image-container{
         position: absolute;
@@ -700,13 +708,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     #verification-page .awaiting-text .btn{
         margin: 9px 0 0 0;
     }
-    .main-nav .navbar-nav li{
-        display: flex;
-        align-items: center;
-    }
-    .main-nav .collapse.navbar-collapse{
-        background-color: #fff;
-    }
     .sprout-1{
         width: 60%;
         position: absolute;
@@ -720,7 +721,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
 
 
+
+
+    /* ----------------------------- */
     /* All Categories */
+    /* ----------------------------- */
 
     #categories-nav.navbar{
         background: #00618c;
@@ -730,6 +735,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     #categories-nav.navbar button.navbar-toggler{
         display: block;
     }
+
+    /* ----------------------------- */
+    /* Search Area */
+    /* ----------------------------- */
+
     .search-area{
         width: 573px;
        position: relative;
@@ -797,8 +807,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         font-size: 14px;
         width: 56px;
     }
+
     /* ------------------------- */
     /* Other Dropdown */
+    /* ------------------------- */
+
     .other-dropdown{
         display: block;
         height: 32px;
@@ -911,13 +924,9 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
 
 
 
-
-    .other-nav-toggler-icon{
-    }
-
-
+    /* ----------------------------- */
     /* All Project Item Category */
-
+    /* ----------------------------- */
 
     #all_pro_item_rows{
         display: grid;
@@ -952,7 +961,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         background-color: transparent;
     }
 
+
+    /* -------------------------------- */
     /* Create Repository */
+    /* -------------------------------- */
+
     .fe-form{
         padding-left: 90px;
         padding-right: 90px;
