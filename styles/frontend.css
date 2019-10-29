@@ -636,7 +636,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
 }
 @media only screen and (min-width: 768px){
     .second-col{
-        /* display: flex; */
         height: calc(100% - 48px);
     }
     .row .second-col{
@@ -650,7 +649,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         width: 50%;
         font-size: 16px;
         padding: 0 84px;
-        /* margin-top: 112px; */
     }
     .main-nav .navbar-brand{
         width: 136px;
@@ -660,7 +658,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         justify-content: flex-end !important;
         align-items: flex-end;
         width: 100%;
-        /* align-self: right; */
     }
     .main-nav .collapse.navbar-collapse ul{
         padding-left: 26px;
@@ -668,8 +665,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .main-nav .navbar-nav{
         width: 100%;
         padding-right: 26px;
-
-        /* background-color: red; */
         justify-content: flex-end;
         justify-self: right !important;
     }
@@ -677,10 +672,8 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         display: none;
     }
     .awaiting-decor, .verification-image-container{
-        /* width: 699px; */
         position: absolute;
         width: 70%;
-        /* height: 551px; */
         height: calc(100vh - 48px);
         background-size: 70%;
         background-position: 0 100%;
@@ -688,21 +681,15 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         margin-top: 0;
     }
     .second-col .verification-image-container{
-        /* background-image: url("../../icons/hero-image-verification\ page.svg");
-        background-color: red; */
         background-position: 20px center;
-        /* background-size: 70%; */
     }
     .awaiting-text p{
         font-size: 2em;
-        /* width: 533px; */
-        /* margin-top: 112px; */
         text-align: left;
         width: 100%;
         background-color: transparent;
     }
     .awaiting-text .account-status{
-        /* width: 556px; */
         font-size: 1rem;
         margin-top: 25px;
         width: 100%;
@@ -773,14 +760,12 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .search-box{
         display: flex;
         width: calc(100% - 50px);
-        /* background-color: yellow; */
     }
     .top-nav-search:focus{
         box-shadow: none !important;
         border: 0 !important;
     }
     .search-area .dropdown input{
-        /* width: 47px; */
         border: 0;
         width: calc(100% - 47px);
         height: 35px;
@@ -797,7 +782,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .listings img{
         display: block;
         width: 158px;
-        /* height: 178px; */
         background-color: grey;
     }
     .listings .content-wrapper{
@@ -825,7 +809,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     .other-dropdown .navbar-header .navbar-toggle{
         height: 32px;
-        /* width: 40px; */
         border: none;
         outline: none;
         background-color: transparent;
@@ -837,7 +820,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     .second-level{
         position: relative;
-        /* background-color: green; */
     }
     .second-level .dropdown-toggle{
         position: relative;
@@ -845,19 +827,12 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         padding-right: 76px;
         height: 54px;
         line-height: 54px;
-        /* padding: 19px 80px 19px 10px;; */
-    }
-    .second-level:hover .dropdown-toggle{
-        /* height: 54px;
-        line-height: 54px; */
     }
     .second-level:hover .dropdown-toggle,
     .black-anchor:hover{
         color: #000;
-        /* font-weight: bold; */
         font-size: 16px;
         text-decoration: none;
-        /* display: inline-block; */
     }
     .second-level .dropdown-toggle::before,
     .second-level .dropdown-toggle:after{
@@ -877,10 +852,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         padding-left: 100px;
 
     }
-    .first-level .navbar-nav{
-        /* padding-left: 10px;
-        padding-right: 84px; */
-    }
     .navbar-header .navbar-toggle {
         color: #fff;
     }
@@ -897,17 +868,13 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         border: none;
         display: flex;
         flex-wrap: wrap;
-        /* padding-left: 8em;
-        padding-right: 8em; */
     }
     .navbar-header:hover  .collapse.navbar-collapse{
         display: block;
         top: 32px;
         position: absolute;
         left: 0;
-        /* padding-left: 84px; */
         width: 100%;
-        /* background-color: #fafafa; */
     }
     .other-dropdown .dropdown-list-item{
         text-align: left;
@@ -932,7 +899,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     .next-level-list .black-anchor{
         min-width: 80px;
-        /* font-weight: bold; */
     }
     .next-level-list{
         background-color: #fff;
@@ -969,8 +935,6 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         background-color: transparent;
         background-repeat: no-repeat;
         background-position: 40px center;
-        /* padding-left: 80px;
-        padding-right: 80px; */
     }
     input[type="checkbox"]#report_paper:checked ~ form {
         padding: 22px 80px 36px 80px;
