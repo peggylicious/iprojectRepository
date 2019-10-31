@@ -636,10 +636,12 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         padding-left: 84px;
         padding-right: 84px;
     }
-
+    .navbar.main-nav{
+        padding: 0 84px;
+    }
     .main-nav .navbar-brand{
         width: 136px;
-        margin-left: 24px;
+        /* margin-left: 24px; */
     }
     .main-nav .collapse.navbar-collapse{
         justify-content: flex-end !important;
@@ -647,11 +649,11 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         width: 100%;
     }
     .main-nav .collapse.navbar-collapse ul{
-        padding-left: 26px;
+        /* padding-left: 26px; */
     }
     .main-nav .navbar-nav{
         width: 100%;
-        padding-right: 26px;
+        /* padding-right: 26px; */
         justify-content: flex-end;
         justify-self: right !important;
     }
@@ -684,7 +686,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         width: 70%;
         height: calc(100vh - 48px);
         background-size: 70%;
-        background-position: 0 100%;
+        background-position: 0% 50%;
         margin-bottom: 0;
         margin-top: 0;
     }
@@ -989,5 +991,16 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     }
     .fe-form input[type="file"] {
         background-position: center center;
+    }
+}
+@media only screen and (min-width: 1100px){
+    .awaiting-decor, .verification-image-container{
+        position: absolute;
+        width: 70%;
+        height: calc(100vh - 48px);
+        background-size: 70%;
+        background-position: 0 100%;
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }

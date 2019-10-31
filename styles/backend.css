@@ -974,6 +974,19 @@ border-radius: 4px;
     font-weight: bold;
 }
 
+/* -------------------------------- */
+/* Notification Components */
+/* -------------------------------- */
+.alert.alert-dismissible{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+.alert .close{
+    line-height: initial;
+    padding: 0;
+}
+
 @media only screen and (max-width: 699px){
     input#toggle-me:checked ~ .container-fluid .move-down{
         top: 400px;
