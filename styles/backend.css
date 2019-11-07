@@ -504,16 +504,20 @@ form button.btn[type="submit"] span{
 }
 .form-group .uploader input{
     height: 100%;
-    display: block;
+    /* display: block; */
     width: 100%;
     display: none;
     background: teal;
-    visibility: hidden;
+    /* visibility: hidden; */
+}
+.upload-icon{
+    /* position: absolute; */
 }
 .form-group .uploader label{
     height: 100%;
     width: 50%;
     margin: 0;
+    background-color: red;
 }
 .form-group .uploader input::-webkit-file-upload-button{
     visibility: hidden;
@@ -546,10 +550,14 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
 .tab-3-form .form-group{
     position: relative;
 }
+.tab-3-form .form-group label{
+    width: auto;
+    position: relative;
+}
 .tab-3-form .form-group span{
     position: absolute;
     right: 7px;
-    top: 50px;
+    top: 0px;
 }
 .tab-3-form .form-group textarea{
     padding-top: 15px;
@@ -988,10 +996,12 @@ border-radius: 4px;
 .alert.alert-dismissible svg{
     display: block;
     margin-right: 23px;
+    line-height: 100%;
 }
-.alert .close{
+.alert.alert-dismissible .close{
     line-height: initial;
     padding: 0;
+    right: 12px;
 }
 
 @media only screen and (max-width: 699px){
@@ -1015,7 +1025,7 @@ border-radius: 4px;
         box-shadow: none;
     }
     .col.second{
-        height: 900px;
+        height: 1100px;
     }
     .container-fluid .col.first{
         height: unset;
@@ -1140,11 +1150,17 @@ border-radius: 4px;
         margin-left: 40px; */
         background-color: #fff;
     }
+    .move-down .tab-form{
+        /* padding-bottom: 57px; */
+    }
+    .move-down .tab-form .btn{
+        margin-top: 30px;
+    }
     .move-down .row .col > form .form-group{
         margin: 0;
     }
     .move-down form label{
-        margin: 0;
+        /* margin: 0; */
     }
     .move-down form button.btn[type="submit"],
     .move-down .col  form > label{
@@ -1153,14 +1169,39 @@ border-radius: 4px;
         padding: 0;
         height: 25px;
     }
+    .move-down .row .col .tab-form .btn{
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 30px;
+    }
     .move-down form button.btn[type="submit"] span{
         font-size: 14px;
     }
     .move-down .form-group .uploader{
+        position: relative;
+    }
+    .move-down .tab-1-form .form-group .uploader{
         width: 203px;
         padding: 0;
         background-color: transparent;
         height: auto;
+        /* position: relative; */
+    }
+    .form-group .uploader input{
+        display: block;
+        /* height: 227px;
+        width: 303px; */
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        z-index: 10;
+    }
+    .tab-2-form .form-group .uploader input{
+        /* height: auto; */
+    }
+    .form-group .upload-wrapper img,
+    .form-group .upload-wrapper span{
+        pointer-events: none;
     }
     .move-down .form-group .uploader > div {
         height: 227px;
@@ -1169,25 +1210,25 @@ border-radius: 4px;
     .move-down .form-group .uploader > div img {
         height: 147px;
     }
-    .move-down .uploader label img{
+    .move-down .tab-1-form .uploader label img{
         display: none;
     }
     .move-down .form-group .uploader > div span {
         font-size: 16px;
         font-weight: normal;
     }
-    .move-down .row .col .tab-1-form{
+    /* .move-down .row .col .tab-1-form{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(100px, aut0);
         grid-gap: 10px;
-    }
-    .move-down .row .col .tab-2-form,
+    } */
+    /* .move-down .row .col .tab-2-form,
     .move-down .row .col .tab-3-form{
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(100px, aut0);
         grid-gap: 10px;
-    }
+    } */
 
     .move-down .tab-2-form button.btn[type="submit"],
     .move-down .tab-3-form button.btn[type="submit"],
@@ -1243,13 +1284,20 @@ border-radius: 4px;
     }
 
     input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* align-items: ; */
     }
     input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ form{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     input#toggle_first_tab:checked ~ .container-fluid label.tab_2 ~ form,
     input#toggle_first_tab:checked ~ .container-fluid label.tab_3 ~ form,
@@ -1272,15 +1320,48 @@ border-radius: 4px;
         border-bottom: 2px solid #3498DB;
     }
 
-
-
-
-
+    .splitter{
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .splitter .form-group.group-2{
+        width: 100%;
+    }
+    .splitter .form-group{
+        width: 45%;
+    }
+    .splitter .btn.group-9{
+        margin: 0;
+    }
     .group-1{
+        width: 30%;
+        /* background-color: red; */
+    }
+
+    .tab-2-form .form-group,
+    .tab-3-form .form-group{
+        width: 100%;
+    }
+    .move-down .tab-2-form .form-group .uploader{
+        border: 2px dashed #d2d2d2;
+        background-color: #fff;
+    }
+    .form-group .upload-button{
+        padding: 11px 59px;
+        background-color: #3498db;
+        width: auto;
+        height: auto;
+        /* display: inline-block; */
+        border-radius: 6px;
+        color: #fff;
+    }
+
+    /* .group-1{
         grid-row: 1/4;
         grid-column: 1;
         height: 230px;
-        /* background-color: red; */
     }
     .group-2{
         grid-row: 1;
@@ -1323,7 +1404,8 @@ border-radius: 4px;
         margin: 0 0 69px 0;
         justify-self: end;
     }
-    form label.group-11{
+    */
+    /* form label.group-11{
         grid-row: 6;
         grid-column: 4/5;
         margin: 0 0 69px 0;
@@ -1354,7 +1436,7 @@ border-radius: 4px;
     .group-3-5{
         grid-row: 3;
         grid-column: 3/4;
-    }
+    } */
     .navbar-collapse.collapsing{
         display: none !important; /* Removes transition effect appearing on the left of large screens */
     }
@@ -1406,7 +1488,7 @@ border-radius: 4px;
     .tab-3-form .form-group span{
         /* position: absolute; */
         right: 7px;
-        top: 23px;
+        top: 0;
     }
     .tab-3-form .form-group textarea{
         /* padding-top: 15px; */
