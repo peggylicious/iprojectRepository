@@ -165,8 +165,16 @@ nav.navbar.main-nav{
     position: absolute;
     top: 48px;
 }
-
-.search-area .dropdown a.btn{
+.search-area .optional-search{
+    background: #3498DB;
+    border-radius: 4px 0px 0px 4px;
+    color: #fff;
+    width: 50px;
+}
+.search-area .optional-search option{
+    color: #fff;
+}
+.search-area .dropdown .btn{
     width: 50px;
     height: 35px;
     display: inline-block;
@@ -187,7 +195,7 @@ nav.navbar.main-nav{
     height: 35px;
     background: #eeeeee;
 }
-.search-box a.btn.search-link{
+.search-box .btn.search-link{
     background: #00618c;
 }
 .other-dropdown{
@@ -617,8 +625,127 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     transform: translate(-50%, 0);
 }
 
+/* ************************************ */
+/* HOME */
+/* ************************************ */
 
+.home-container{
+    height: 100%;
+    position: relative;
+    background-image: url("../images/home-photo.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.search-area.home-search{
+    /* display: none; */
+    padding: 10px 17px 22px 17px;
+}
+.home-container .search-area{
+    position: relative;
+    top: 0;
+}
+.home-container .heading{
+    font-size: 18px;
+    font-weight: 300;
+    /* margin-top: 63px; */
+    padding: 63px 16px 0 16px;
+    /* font-size: 40px; */
+}
+.color-pop{
+    color: #f4772e;
+}
+.home-container .heading .pub-num{
+    font-size: 28px;
+    /* font-size: 54px; */
+}
+.home-container .search-box .search-link{
+    background: #3498DB;
+    border-radius: 0px 4px 4px 0px;
 
+}
+.home-container .search-box .search-link svg{
+    /* margin: 6px 10px; */
+}
+#home .second-col{
+    height: calc(100% - 48px);
+    overflow: hidden;
+    /* background-image: url("../images/home-photo.png");
+    background-repeat: no-repeat;
+    background-position: right bottom; */
+}
+.home-badges{
+    padding: 0 16px;
+    margin-bottom: 25px;
+}
+.home-badges .badge{
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 11px;
+}
+.badge-link{
+    color: #000;
+}
+.publish{
+    padding: 0 16px;
+}
+.publish .badge{
+    background: #00618C;
+    color: #fff;
+    font-weight: normal;
+    padding: 6px;
+    font-size: 14px;
+    border-radius: 4px;
+    /* width: auto; */
+}
+.badge.badge-2{
+    background: #3498DB;
+}
+.publish .badge .badge-pic{
+    width: 24px;
+    height: 24.69px;
+    background-color: #fff;
+    /* line-height: 24.69px; */
+    padding: 5px;
+    display: inline-block;
+    border-radius: 4px;
+    font-weight: normal;
+    /* font-size: 0; */
+}
+.badge-pic svg{
+}
+.join-container{
+    width: auto;
+}
+.publish .badge{
+    margin-bottom: 14px;
+}
+.no-acc{
+    color: #d2d2d2;
+}
+.join-option{
+    color: #d2d2d2;
+    width: 174px;
+    font-size: 12px;
+    line-height: 1.6;;
+}
+.no-acc{
+    color: #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+}
+.moon{
+    width: 365.73px;
+    height: 331.38px;
+    background: #f4772e;
+    border-radius: 100%;
+    position: absolute;
+    right: -94.73px;
+    bottom: -237.38px;
+    z-index: -1;
+
+}
+
+/* color #f4772e */
 @media only screen and (min-width: 768px) and (min-height: 1000px){
     .row{
         height: 100vh;
@@ -992,6 +1119,69 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     .fe-form input[type="file"] {
         background-position: center center;
     }
+
+
+
+
+/* ************************************ */
+/* HOME */
+/* ************************************ */
+.home-container{
+    margin-top: 32px;
+}
+.home-container{
+    height: 100%;
+    position: relative;
+    background-image: url("../images/home-photo.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.home-container > h2{
+    font-size: 22px;;
+}
+.search-area.home-search{
+    display: block;
+    padding: 10px 0;
+    margin: 0;
+
+}
+#home .second-col{
+    padding-left: 81px !important;
+    padding-right: 81px !important;
+}
+.home-container .heading{
+    font-size: 40px;
+    /* margin: 81px 0 0 0; */
+    /* padding-top: 81px; */
+    max-width: 792px;
+    padding: 81px 0 0 0;
+}
+.home-container .heading .pub-num{
+    font-size: 58px;
+}
+.home-badges{
+    padding: 0;
+}
+.publish{
+    padding: 0;
+}
+.join-container br{
+    display: none;;
+}
+.join-option{
+    width: auto;
+}
+.moon{
+    right: -243px;
+    bottom: -526px;
+    height: 849px;
+    width: 937px;
+}
+.moon-img{
+    width: 100%;
+    height: auto;
+}
+
 }
 @media only screen and (min-width: 1100px){
     .awaiting-decor, .verification-image-container{

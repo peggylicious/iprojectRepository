@@ -189,15 +189,15 @@
 
             <!-- Main Content Area -->
 
-            <div class="row mx-0 my-0">
+            <form class="row mx-0 my-0" id="my-form">
 
               <!-- First Tab Area -->
 
               <div class="col form-col-1 mx-0 my-0 px-0 py-0">
                 <!-- Tab 1 click to display button -->
-                <label for="toggle_first_tab" class="tabs tab_1 my-0 d-flex justify-content-center align-items-center" checked="checked"><span>Project Information</span></label>
+                <label for="toggle_first_tab" class="tabs tab_1 my-0 d-flex justify-content-center align-items-center" checked="checked"><span>Paper Information</span></label>
                 <!-- Tab 1 Form Area -->
-                <form class="tab-form tab-1-form sectioned-form">
+                <div class="tab-form tab-1-form sectioned-form">
                   <div class="form-group group-1">
                     <!-- <label for="exampleInputText1">Project Title</label> -->
                     <div class="uploader d-flex flex-row align-items-center justify-content-between">
@@ -208,17 +208,17 @@
                       </label>
                       <!-- <img src="../../icons/upload.svg" alt="" class="upload-icon"> -->
 
-                      <input type="file" class="form-control" id="upload_book_cover" value="Upload Cover Image" name="file">
+                      <input type="file" class="form-control" id="upload_book_cover" value="Upload Cover Image" name="cover_image">
                     </div>
                   </div>
                   <div class="splitter">
                     <div class="form-group group-2">
                         <label for="exampleInputText1">Paper Title</label>
-                        <input type="text" class="form-control" id="exampleInputText1" name="paper-title" >
+                        <input type="text" class="form-control" id="exampleInputText1" name="title" >
                     </div>
                     <div class="form-group group-3">
-                      <label for="exampleFormControlSelect1">Departments</label>
-                      <select class="form-control" id="exampleFormControlSelect1" name="departments">
+                      <label for="exampleFormControlSelect1">Category</label>
+                      <select class="form-control" id="exampleFormControlSelect1" name="category_id">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -228,11 +228,11 @@
                     </div>
                     <div class="form-group group-4">
                       <label for="exampleInputText2">Chapter</label>
-                      <input type="text" class="form-control" id="exampleInputText2" name="chapter">
+                      <input type="text" class="form-control" id="exampleInputText2" name="chaptersw">
                     </div>
                     <div class="form-group group-5">
                       <label for="exampleFormControlSelect2">Item types</label>
-                      <select class="form-control" id="exampleFormControlSelect2" name="item-types">
+                      <select class="form-control" id="exampleFormControlSelect2" name="itemtype_id">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -246,7 +246,7 @@
                     </div>
                     <div class="form-group group-7">
                       <label for="exampleFormControlSelect3">Visible</label>
-                      <select class="form-control" id="exampleFormControlSelect3" name="visibility">
+                      <select class="form-control" id="exampleFormControlSelect3" name="visible">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -260,20 +260,20 @@
                     </div>
                   </div>
                   <!-- Save and Next Buttons  -->
-                  <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center group-9"><img src="../../icons/downloadkk.png" alt=""> <span>SAVE</span></button>
+                  <!-- <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center group-9"><img src="../../icons/downloadkk.png" alt=""> <span>SAVE</span></button> -->
                   <label for="toggle_second_tab" class="btn tabs tab_2 d-none d-md-flex justify-content-center align-items-center group-10">
                     <span>Next Label</span>
                   </label>
-                </form>
+                </div>
               </div>
 
               <!-- Second Tab Area -->
 
               <div class="col form-col-2 px-0 py-0">
                 <!-- Tab 2 click to display button -->
-                <label for="toggle_second_tab" class="tabs tab_2 my-0 d-flex justify-content-center align-items-center"><span>Project <br> Body</span></label>
+                <label for="toggle_second_tab" class="tabs tab_2 my-0 d-flex justify-content-center align-items-center"><span>Paper <br> Body</span></label>
                 <!-- Tab 2 Form Area -->
-                <form class="tab-form tab-2-form sectioned-form">
+                <div class="tab-form tab-2-form sectioned-form">
                   <div class="form-group group-2-1">
                     <!-- <label for="exampleInputText8">Project Title</label>
                     <input type="file" class="form-control" id="exampleInputText8"> -->
@@ -284,36 +284,36 @@
                         <img src="../../icons/upload.svg" alt="">
                         <span>Upload cover image</span>
                       </label>
-                      <input type="file" class="" id="paper-uploader">
+                      <input type="file" class="form-control" id="paper-uploader" name="file_url">
                     </div>
                     <div class="text-center">
                       <label for="paper-uploader" class="upload-button">Choose file</label>
                     </div>
                   </div>
                   <div class="form-group group-2-2">
-                    <label for="exampleFormControlTextarea1">Project Title</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label for="exampleFormControlTextarea1">Project Body</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body"></textarea>
                   </div>
                   <!-- Previous, Save and Next Buttons  -->
                   <label for="toggle_first_tab" class="btn tabs tab_2 d-none d-md-flex justify-content-center align-items-center group-2-3">
                     <span>Previous</span>
                   </label>
-                  <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center group-2-4">
+                  <!-- <button type="submit" class="btn btn-primary d-flex justify-content-center align-items-center group-2-4">
                     <img src="../../icons/downloadkk.png" alt=""> <span>SAVE</span>
-                  </button>
+                  </button> -->
                   <label for="toggle_third_tab" class="btn tabs tab_2 d-none d-md-flex justify-content-center align-items-center group-2-5">
                     <span>Next Label</span>
                   </label>
-                </form>
+                </div>
               </div>
 
               <!-- Third Tab Area -->
 
               <div class="col form-col-3 px-0 py-0">
                 <!-- Tab 3 click to display button -->
-                <label for="toggle_third_tab" class="tabs tab_3 my-0 d-flex justify-content-center align-items-center"><span>Project Attributes</span></label>
+                <label for="toggle_third_tab" class="tabs tab_3 my-0 d-flex justify-content-center align-items-center"><span>Paper Attributes</span></label>
                 <!-- Tab 3 Form Area -->
-                <form class="tab-form tab-3-form sectioned-form">
+                <div class="tab-form tab-3-form sectioned-form">
                   <div class="form-group group-3-1">
                     <label for="exampleFormControlTextarea2">Tags & Keywords(Optional)
                       <span data-toggle="tooltip" data-placement="left" title="Tooltip on left">
@@ -323,12 +323,12 @@
                           </svg>
                     </span>
                     </label>
-                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" name="tags"></textarea>
 
                   </div>
                   <div class="form-group group-3-2">
-                    <label for="exampleFormControlTextarea3">References(Optional)</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="3"></textarea>
+                    <label for="methodologyControl">Methodology(Optional)</label>
+                    <textarea class="form-control" id="methodologyControl" rows="3" name="methodology"></textarea>
                     <span data-toggle="tooltip" data-placement="left" title="Tooltip on left">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M14 7.00017C14 3.1338 10.866 0 7.00011 0C3.13404 0 0 3.1338 0 7.00017C0 10.8659 3.13404 14 7.00011 14C10.866 14 14 10.8659 14 7.00017Z" fill="#3498DB"/>
@@ -336,7 +336,25 @@
                           </svg>
                     </span>
                   </div>
-
+                  <div class="form-group">
+                    <label for="formatControl">Format</label>
+                    <select class="form-control" id="formatControl" name="format">
+                      <option value="DOC">DOC</option>
+                      <option value="DOCX">DOCx</option>
+                      <option value="ELS">Excel(els)</option>
+                      <option value="PDF">PDF</option>
+                    </select>
+                  </div>
+                  <div class="form-group group-3-2">
+                    <label for="referencesControl">References(Optional)</label>
+                    <textarea class="form-control" id="referencesControl" rows="3" name="references"></textarea>
+                    <span data-toggle="tooltip" data-placement="left" title="Tooltip on left">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14 7.00017C14 3.1338 10.866 0 7.00011 0C3.13404 0 0 3.1338 0 7.00017C0 10.8659 3.13404 14 7.00011 14C10.866 14 14 10.8659 14 7.00017Z" fill="#3498DB"/>
+                          <path d="M4 4.76089C4 4.3426 4.10165 3.91875 4.30499 3.48943C4.50827 3.06011 4.80501 2.70455 5.19499 2.42271C5.585 2.14095 6.04 2 6.56 2C7.04328 2 7.47 2.11787 7.84 2.35336C8.21001 2.58897 8.49578 2.90932 8.69751 3.31439C8.89915 3.71957 9 4.15983 9 4.63538C9 5.00969 8.9425 5.3378 8.82749 5.61953C8.71248 5.90137 8.57577 6.14465 8.41748 6.34936C8.25912 6.55413 7.97497 6.89871 7.56498 7.38307C7.45163 7.51961 7.36075 7.63964 7.29248 7.74308C7.22412 7.84657 7.17326 7.94123 7.13997 8.02705C7.10661 8.11294 7.08074 8.19879 7.06246 8.28467C7.0441 8.37049 7.01661 8.5214 6.97997 8.73711C6.91662 9.19511 6.71826 9.42405 6.38498 9.42405C6.21163 9.42405 6.06576 9.34923 5.94748 9.19946C5.82913 9.04979 5.76999 8.82741 5.76999 8.53237C5.76999 8.16248 5.81327 7.84212 5.89999 7.57134C5.98664 7.3005 6.10163 7.06272 6.24499 6.85801C6.38826 6.65324 6.58164 6.40999 6.82499 6.12815C7.03827 5.88159 7.19249 5.69552 7.2875 5.57002C7.3825 5.44452 7.46249 5.3048 7.5275 5.15059C7.59249 4.9965 7.62501 4.82921 7.62501 4.64861C7.62501 4.29636 7.52579 3.99916 7.3275 3.75693C7.12914 3.51483 6.87327 3.39365 6.56 3.39365C6.19326 3.39365 5.92327 3.51585 5.74998 3.76024C5.57663 4.00463 5.42999 4.3646 5.30998 4.84015C5.19663 5.3378 4.98161 5.58652 4.66497 5.58652C4.47823 5.58652 4.32074 5.49962 4.19247 5.32563C4.06415 5.1517 4 4.96346 4 4.76089ZM6.44 12C6.23664 12 6.05914 11.913 5.9075 11.7391C5.75579 11.5652 5.67999 11.3219 5.67999 11.0092C5.67999 10.7318 5.75326 10.4985 5.89999 10.3091C6.04663 10.1198 6.22662 10.0251 6.43998 10.0251C6.64999 10.0251 6.82662 10.1198 6.96998 10.3091C7.11325 10.4985 7.18498 10.7318 7.18498 11.0092C7.18498 11.3175 7.10998 11.5597 6.95997 11.7358C6.80997 11.9119 6.63666 12 6.44 12Z" fill="white"/>
+                          </svg>
+                    </span>
+                  </div>
                   <!-- Next, Save and Create Project Buttons  -->
                   <label for="toggle_second_tab" class="btn tabs tab_2 d-none d-md-flex justify-content-center align-items-center group-3-3">
                     <span>Previous</span>
@@ -345,9 +363,9 @@
                   <button type="submit" class="btn btn-primary d-none d-md-flex justify-content-center align-items-center group-3-5">
                     <img src="../../icons/downloadkk.png" alt=""> <span>CREATE PROJECT</span>
                   </button>
-                </form>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

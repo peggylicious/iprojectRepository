@@ -405,7 +405,7 @@ label.tabs span{
     background-color: #fff;
 }
 label.tabs ~ p,
-label.tabs ~ form{
+label.tabs ~ .sectioned-form{
     display: none;
     position: absolute;
     width: 100%;
@@ -415,19 +415,20 @@ label.tabs ~ form{
 
 
 /* FORM */
-.row .col form{
+.row .col .sectioned-form{
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 16px;
 }
-.row .col form .form-control:hover,
-.row .col form .form-control:focus,
-.row .col form .form-control:active{
+.row .col .sectioned-form .form-control:hover,
+.row .col .sectioned-form .form-control:focus,
+.row .col .sectioned-form .form-control:active{
     outline: none !important;
     box-shadow: none !important;
     border-color: none !important;
     background-color: #f4f4f4;
 }
-form label{
+.sectioned-form label{
     font-size: 14px;
     font-weight: 600;
     vertical-align: center;
@@ -441,33 +442,33 @@ form label{
 .tab-3-form > label.btn{
     /* display: none; */
 }
-form input.form-control{
+.sectioned-form input.form-control{
     height: 40px;
 }
 .tab-2-form .form-group textarea{
     height: 333px;
 }
-form .form-control{
+.sectioned-form .form-control{
     border: none;
     border-radius: 2px;
     background-color: #f4f4f4;
 }
-form button.btn[type="submit"],
-.move-down .col > form > label{
+.sectioned-form button.btn[type="submit"],
+.move-down .col > .sectioned-form > label{
     background: #3498DB;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
     border-radius: 2px;
     width: 328px;
     /* margin: 0 auto 69px auto; */
 }
-form button.btn[type="submit"]{
+.sectioned-form button.btn[type="submit"]{
     margin: 0 auto 69px auto;
 }
-form button.btn[type="submit"] img{
+.sectioned-form button.btn[type="submit"] img{
     margin-right: 8px;
     margin-top: -4px;
 }
-form button.btn[type="submit"] span{
+.sectioned-form button.btn[type="submit"] span{
     font-size: 16px;
     font-weight: 500;
 }
@@ -525,7 +526,7 @@ form button.btn[type="submit"] span{
 
 
 input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ p,
-input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
+input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ .sectioned-form{
     display: block;
     /* background-color: #3498DB; */
 }
@@ -535,11 +536,11 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3{
     /* background-color: blue; */
 }
 input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ p,
-input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ form{
+input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ .sectioned-form{
     display: block;
 }
 input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ p,
-input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
+input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ .sectioned-form{
     display: block;
 }
 
@@ -561,6 +562,14 @@ input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
 }
 .tab-3-form .form-group textarea{
     padding-top: 15px;
+}
+.group-3-4 img,
+.group-3-4 span{
+    pointer-events: none;
+}
+
+.group-10{
+    margin-left: auto;
 }
 
 
@@ -1120,6 +1129,10 @@ border-radius: 4px;
         width: calc(100% - 80px);
         margin-left: 40px;
     }
+    .row .col > .sectioned-form{
+        width: calc(100% - 80px);
+        margin-left: 40px;
+    }
     nav.breadcrumb-nav{
         background-color: transparent;
     }
@@ -1144,7 +1157,7 @@ border-radius: 4px;
 
     /* Second column forms */
 
-    .move-down .row .col > form{
+    .move-down .row .col > .sectioned-form{
         padding-top: 26px;
         /* width: calc(100% - 80px);
         margin-left: 40px; */
@@ -1156,14 +1169,14 @@ border-radius: 4px;
     .move-down .tab-form .btn{
         margin-top: 30px;
     }
-    .move-down .row .col > form .form-group{
+    .move-down .row .col > .sectioned-form .form-group{
         margin: 0;
     }
     .move-down form label{
         /* margin: 0; */
     }
-    .move-down form button.btn[type="submit"],
-    .move-down .col  form > label{
+    .move-down .sectioned-form button.btn[type="submit"],
+    .move-down .col  .sectioned-form > label{
         width: 203px;
         border-radius: 6px;
         padding: 0;
@@ -1246,7 +1259,7 @@ border-radius: 4px;
         font-weight: bold;
     }
 
-    form button.btn[type="submit"] img{
+    .sectioned-form button.btn[type="submit"] img{
         display: none;
     }
     .uploader.d-flex{
@@ -1260,7 +1273,7 @@ border-radius: 4px;
     .move-down .col > form.tab-form-3 > label{
         /* margin-top: 69px !important; */
     }
-    .move-down .col > form > label{
+    .move-down .col > .sectioned-form > label{
         /* padding: .375rem .75rem; */
         padding: 0;
         height: initial;
@@ -1283,28 +1296,28 @@ border-radius: 4px;
         /* margin-left: 40px; */
     }
 
-    input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ form{
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_1 ~ .sectioned-form{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         /* align-items: ; */
     }
-    input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ form{
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_2 ~ .sectioned-form{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ form{
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_3 ~ .sectioned-form{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    input#toggle_first_tab:checked ~ .container-fluid label.tab_2 ~ form,
-    input#toggle_first_tab:checked ~ .container-fluid label.tab_3 ~ form,
-    input#toggle_second_tab:checked ~ .container-fluid label.tab_1 ~ form,
-    input#toggle_second_tab:checked ~ .container-fluid label.tab_3 ~ form,
-    input#toggle_third_tab:checked ~ .container-fluid label.tab_1 ~ form,
-    input#toggle_third_tab:checked ~ .container-fluid label.tab_2 ~ form{
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_2 ~ .sectioned-form,
+    input#toggle_first_tab:checked ~ .container-fluid label.tab_3 ~ .sectioned-form,
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_1 ~ .sectioned-form,
+    input#toggle_second_tab:checked ~ .container-fluid label.tab_3 ~ .sectioned-form,
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_1 ~ .sectioned-form,
+    input#toggle_third_tab:checked ~ .container-fluid label.tab_2 ~ .sectioned-form{
         display: none;
     }
 
@@ -1321,7 +1334,8 @@ border-radius: 4px;
     }
 
     .splitter{
-        width: 70%;
+        width: calc(100% - 253px);
+        /* width: 70%; */
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -1336,7 +1350,7 @@ border-radius: 4px;
         margin: 0;
     }
     .group-1{
-        width: 30%;
+        /* width: 30%; */
         /* background-color: red; */
     }
 
