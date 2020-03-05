@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing File Upload</title>
+</head>
+<body>
+        <input id="file-upload" type="file"
+        accept=".gif,.jpg,.jpeg,.png">
+
+    <script>
+            window.addEventListener("load", function() {
+            document.getElementById("file-upload").onchange = function(event) {
+                var reader = new FileReader();
+                reader.readAsDataURL(event.srcElement.files[0]);
+                var me = this;
+                reader.onload = function () {
+                var fileContent = reader.result;
+                console.log(fileContent);
+                }
+            }});
+    </script>
+</body>
+</html>

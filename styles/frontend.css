@@ -345,12 +345,16 @@ article a.btn{
 /* ---------------------------- */
 
 
-#report .second-col > form,
+/* #report .second-col > form, */
+.modal-form-1,
+.modal-form-2,
 .overlay,
-input[type="checkbox"]#report_paper {
+input[type="checkbox"]#report_paper,
+input[type="checkbox"]#get_paper {
     display: none;
 }
-input[type="checkbox"]#report_paper:checked ~ .overlay{
+input[type="checkbox"]#report_paper:checked ~ .overlay,
+input[type="checkbox"]#get_paper:checked  ~ .overlay{
     display: block;
     position: absolute;
     height: 100%;
@@ -360,7 +364,8 @@ input[type="checkbox"]#report_paper:checked ~ .overlay{
     z-index: 5;
     top: 64px;
 }
-input[type="checkbox"]#report_paper:checked ~ .modal-form{
+input[type="checkbox"]#report_paper:checked ~ .modal-form-1,
+input[type="checkbox"]#get_paper:checked  ~ .modal-form-2{
     height: calc(100vh - 178px);
     width: 90%;
     background-color: #fff;
@@ -384,7 +389,6 @@ input[type="checkbox"]#report_paper:checked ~ .modal-form{
 }
 .close-report-wrapper svg{
     pointer-events: none;
-
 }
 .report-container{
     clear: both;
@@ -993,14 +997,15 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         padding-left: 84px;
     }
     .second-level{
-        position: relative;
+        /* position: relative; */
     }
     .second-level .dropdown-toggle{
         position: relative;
-        padding-left: 64px;
-        padding-right: 76px;
+        /* padding-left: 64px;
+        padding-right: 76px; */
         height: 54px;
         line-height: 54px;
+        width: 100%;
     }
     .second-level:hover .dropdown-toggle,
     .black-anchor:hover{
@@ -1014,17 +1019,25 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         border: none;
     }
     .first-level{
-        background-color: #fff;
-        border-bottom: 1px solid grey;
+        /* background-color: #fff; */
+        background: #11465E;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        /* border-bottom: 1px solid grey; */
+        background: #d3d3d3;;
     }
     .first-level .second-level:hover >  .dropdown-menu{
         display: block;
-        position: relative;
-        bottom: 0;
-        left: 0;
+        /* position: relative; */
+        position: absolute;
+        top: 0;
+        /* bottom: 0; */
+        left: 245px;
+        width: calc(100vw - 245px);
         color: #000;
         padding-left: 100px;
-
+        background-color: transparent;
+        background: #11465E;
+        height: 100%;
     }
     .navbar-header .navbar-toggle {
         color: #fff;
@@ -1043,26 +1056,37 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         display: flex;
         flex-wrap: wrap;
     }
-    .navbar-header:hover  .collapse.navbar-collapse{
+    .other-dropdown .navbar-header .navbar-toggle:hover  .collapse.navbar-collapse{
         display: block;
         top: 32px;
         position: absolute;
         left: 0;
         width: 100%;
+        height: 300px;
+        width: 245px;
     }
     .other-dropdown .dropdown-list-item{
         text-align: left;
         display: flex;
+        width: 245px;
+        padding-left: 64px;
+        padding-right: 76px;
+        /* position: relative; */
+        /* top: -50px; */
+    }
     }
     .dropdown-list-item > .dropdown-menu{
         border: none;
     }
     .second-level:hover .dropdown-toggle,
     .second-level:hover .dropdown-toggle ~ .dropdown-menu{
-        background-color: #fafafa;
+        /* background-color: #fafafa; */
         border: none;
         border-radius: 0;
         margin: 0;
+    }
+    .second-level:hover{
+        background-color: #fafafa;
     }
     .black-anchor{
         color: #000;
@@ -1075,12 +1099,12 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
         min-width: 80px;
     }
     .next-level-list{
-        background-color: #fff;
+        /* background-color: #fff; */
         padding: 3px 6px;
-        border-radius: 6px;
+        /* border-radius: 6px; */
         margin-left: 10px;
         margin-bottom: 10px;
-        border: 1px solid #d2d2d2;
+        /* border: 1px solid #d2d2d2; */
     }
 
 
@@ -1109,6 +1133,9 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     input[type="checkbox"]#report_paper:checked ~ form {
         padding: 22px 80px 36px 80px;
         width: 760px;
+    }
+    input[type="checkbox"]#report_paper:checked ~ .overlay{
+        margin-left: -84px;
     }
     .report-container{
         position: relative;
@@ -1244,7 +1271,7 @@ input[type="checkbox"]#load_comments:checked ~ .customer-reviews-wrapper > artic
     height: auto;
 }
 
-}
+
 @media only screen and (min-width: 1100px){
     .awaiting-decor, .verification-image-container{
         position: absolute;

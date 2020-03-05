@@ -24,14 +24,8 @@ input[type="checkbox"]{
     box-shadow: none;
     color: #000;
 }
-/* .login-form .form-control:active,
-.login-form .form-control:focus{
-    outline: 0;
-    border: 0;
-    box-shadow: none;
-} */
+
 .col-sm{
-    /* background-color: grey; */
     padding: 0;
 }
 .container-fluid{
@@ -265,11 +259,10 @@ section .login-form .form-control{
 } */
 @media only screen and (min-width: 700px){
     body .container-fluid{
-        /* max-width: 100% ; */
         background: linear-gradient(90deg, #11465E 4.59%, #2981BB 88.87%);
         display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
     }
     .row{
         height: 597px;
@@ -277,12 +270,6 @@ section .login-form .form-control{
         background: #fff;
         box-shadow: 0px 24px 100px rgba(0, 0, 0, 0.25);
         border-radius: 6px;
-        /* left: 50%;
-        top: 50%; */
-        /* margin: auto; */
-        /* position: relative; */
-        /* transform: translate(-50%, -50%); */
-        /* position: absolute; */
     }
     .signup-wrapper nav.navbar,
     .signin-wrapper nav.navbar{
