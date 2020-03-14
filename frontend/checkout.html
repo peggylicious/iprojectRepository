@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../styles/frontend.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid px-0 py-0 mx-0 my-0 checkout-page-section" id="fe-allcategories">
+        <div class="row px-0 py-0 mx-0 my-0">
+            <div class="col-md-12 px-0 py-0 mx-0 my-0 first-col">
+                <nav class="navbar navbar-expand-md navbar-light bg-light px-0 py-0 mx-0 my-0 main-nav">
+                    <a class="navbar-brand" href="#"></a>
+
+                    <div class="search-area">
+                        <div class="dropdown show d-flex">
+                            <a class="btn btn-secondary dropdown-toggle d-none d-sm-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                            <div class="search-box">
+                                <input type="search" name="" id="">
+                                <a href="" class="btn search-link rounded-0">
+                                    <img src="../images/search-magnifier.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="profile-pic">
+                            <img src="../../images/small-user.png" alt="">
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="other-dropdown">
+                    <!-- <nav class="navbar navbar-light px-0 py-0 mx-0 my-0" id="categories-nav">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#secondNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="secondNav" data-hover="dropdown">
+                                <ul class="nav navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#thirdNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <p>Categories</p>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="thirdNav" data-hover="dropdown">
+                                        <ul class="nav navbar-nav mr-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                                <li class="profile-pic">
+                                    <img src="../../images/small-user.png" alt="">
+                                </li>
+                                </ul>
+                            </div>
+                    </nav> -->
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="" data-target="#first_step_dropdown">
+                            All Categories
+                            <span class="sr-only">Toggle navigation</span>
+                            <div class="icon-wrapper">
+                                <span class="other-nav-toggler-icon"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <div class="collapse navbar-collapse first-level" id="first_step_dropdown">
+                                    <ul class="nav navbar-nav">
+                                        <li class="second-level dropdown-list-item">
+                                            <a href="#" class="dropdown-toggle black-anchor">Categories</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-menu-list">
+                                                    <ul class="dropdown-menu next-level">
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemistry</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemical Pathology</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="second-level dropdown-list-item">
+                                            <a href="#" class="dropdown-toggle black-anchor">Categories</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-menu-list">
+                                                    <ul class="dropdown-menu next-level">
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemistry</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Chemical Pathology</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                        <li class="next-level-list"><a href="#" class="black-anchor">Physics</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#">NavBar</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 px-0 py-0 mx-0 my-0 second-col">
+                <div class="checkout-content main-content">
+                    <div class="checkout-wrapper">
+                        <div class="order-summary">
+                            <h3 class="checkout-title">order summary</h3>
+                            <hr>
+                            <div class="purchased-name-price">
+                                <p class="purchased-item-title">Design and implementation of an online banking system</p>
+                                <p class="purchased-item-price">N5000</p>
+                            </div>
+                            <div class="purchased-item-summary">
+                                <p class="purchased-item-property">Number of chapters : <span class="purchased-item-value">5</span></p>
+                                <p class="purchased-item-property">Number of pages : <span class="purchased-item-value">5</span></p>
+                                <p class="purchased-item-property">Author : <span class="purchased-item-value">John Doe</span></p>
+                                <p class="purchased-item-property">Publication type : <span class="purchased-item-value">Journal</span></p>
+                            </div>
+                            <div class="payment-gateway">
+                                <a href="" class="gateway paystack-gateway">
+                                    Pay with
+                                    <img src="../icons/checkout/paystack.svg" alt="paystack">
+                                </a>
+                                <span>OR</span>
+                                <a href="" class="gateway paypal-gateway">
+                                    Pay with
+                                    <img src="../icons/checkout/paypal.svg" alt="paypal">
+                                </a>
+                            </div>
+                            <div class="user-order">
+
+                            </div>
+                            <div class="user-summary">
+
+                            </div>
+                        </div>
+                        <div class="help-desk">
+                            <h3 class="desk-title">Get Help</h3>
+                            <p class="help-how-to">
+                                Lorem ipsum dolor sit amet, consectetur incididunt ut
+                                labore commodo consequat. Lorem ipsum dolor sit amet,
+                                Lorem consectetur incididunt ut labore commodo consequat.
+                            </p>
+                            <div class="contact-support">
+                                <p class="call-support">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.9005 7.17241V8.27584C1.90037 8.56853 2.06091 8.84922 2.34667 9.05619C2.63249 9.26316 3.0201 9.37937 3.42429 9.37928H4.7957C4.66615 9.19975 4.5492 9.01559 4.44524 8.82756H3.42429C3.00401 8.82666 2.6636 8.58019 2.66239 8.27584V7.17241H3.42429V4.9655H2.66239V4.41378C2.66239 2.28081 5.05018 0.551719 7.9957 0.551719C10.9412 0.551719 13.329 2.28081 13.329 4.41378V4.9655H12.5671V7.17241H14.0909C14.301 7.17194 14.4712 7.04872 14.4719 6.89653V5.24134C14.4712 5.08919 14.3011 4.96594 14.0909 4.96547V4.41375C14.0909 1.97613 11.362 0 7.9957 0C4.62942 0 1.9005 1.97613 1.9005 4.41378V4.9655C1.69038 4.96597 1.52018 5.08919 1.51953 5.24137V6.89656C1.52018 7.04872 1.69034 7.17197 1.9005 7.17241Z" fill="white"/>
+                                        <path d="M16 15.4374C16.0031 14.7025 15.4302 14.03 14.5219 13.7022L11.2419 12.3808C10.6514 12.1625 10.2814 11.7216 10.2857 11.2415V10.5767C10.285 10.4568 10.34 10.3402 10.4419 10.2457C10.6425 10.0509 10.8282 9.84833 10.998 9.63877C11.0323 9.60014 11.0666 9.55602 11.1009 9.51186C11.1351 9.4677 11.1657 9.42358 11.1999 9.37945C11.3295 9.19992 11.4464 9.01576 11.5504 8.82773C11.6572 8.63786 11.7438 8.44236 11.8094 8.24292V4.41391C11.8088 4.40188 11.8101 4.38985 11.8132 4.37804C11.864 3.87419 11.6427 3.37575 11.1961 2.98769C10.5638 2.46909 9.48953 2.20703 8 2.20703C6.50668 2.20703 5.4286 2.47184 4.79621 2.99325C4.35098 3.37947 4.13223 3.87653 4.18669 4.3781C4.18984 4.38991 4.19114 4.40194 4.19049 4.41397V8.24295C4.25915 8.44211 4.34697 8.63751 4.45335 8.82776H6.54859C6.70796 8.4982 7.13687 8.27717 7.61908 8.27604H8.76194C9.24506 8.27708 9.67514 8.49795 9.83623 8.82776C9.92768 9.0057 9.92768 9.20155 9.83623 9.37948C9.81897 9.42061 9.79601 9.46036 9.76766 9.49811C9.7441 9.52983 9.71738 9.56027 9.68765 9.58914C9.47183 9.80333 9.12811 9.93036 8.76194 9.9312H7.61908C7.23941 9.9303 6.88467 9.79411 6.6705 9.56708C6.61729 9.50886 6.575 9.4458 6.54479 9.37948H4.80385C4.86862 9.47052 4.93719 9.5588 5.00193 9.6388C5.16941 9.84942 5.35519 10.0521 5.5581 10.2457C5.65999 10.3402 5.71501 10.4568 5.71428 10.5767V11.214C5.71553 11.684 5.35985 12.1164 4.78857 12.3395L1.39429 13.683C0.533055 14.0204 -0.00257993 14.6732 9.34528e-06 15.3823V16.0002H16L16 15.4374Z" fill="white"/>
+                                    </svg>
+                                    08163872988
+                                </p>
+                                <p class="email-support">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path d="M15.6413 12.6271L13.1703 10.1559C12.6782 9.66568 11.8631 9.68057 11.3538 10.1901L10.109 11.4347C10.0303 11.3913 9.9489 11.346 9.86331 11.298C9.07718 10.8624 8.00123 10.2654 6.86903 9.13237C5.73346 7.99694 5.13589 6.91934 4.69898 6.13271C4.65287 6.04938 4.6087 5.96903 4.56507 5.89272L5.40057 5.05847L5.81133 4.6472C6.32142 4.13697 6.33549 3.32216 5.84447 2.83055L3.37352 0.359048C2.8825 -0.131877 2.0671 -0.116984 1.557 0.393248L0.860607 1.09364L0.879637 1.11254C0.646126 1.41049 0.450997 1.75414 0.305787 2.12473C0.171932 2.47748 0.0885941 2.81409 0.0504876 3.1514C-0.275785 5.85627 0.960263 8.32832 4.31474 11.6828C8.95164 16.3194 12.6884 15.9692 12.8496 15.9521C13.2007 15.9101 13.5372 15.8262 13.8791 15.6934C14.2465 15.5499 14.5899 15.355 14.8877 15.122L14.9029 15.1355L15.6084 14.4447C16.1174 13.9346 16.1321 13.1195 15.6413 12.6271Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    support@repository.africa
+                                </p>
+                                <a href="" class="lodge-complaint">Lodge Complaint</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../js/all-categories-dropdown.js"></script>
+
+</body>
+</html>
